@@ -1,3 +1,5 @@
+
+  
 \documentclass[11pt,letter]{article}
 \usepackage{amsfonts,epsf,amsmath,amssymb,graphicx,tabularx,booktabs}
 \usepackage{graphicx}
@@ -57,7 +59,7 @@
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \begin{document}
 
-\title{\bf{Projekat}}
+\title{\bf{Problem izlaska iz \v sume}}
 
 \author{
 Katarina Krivoku\'ca \\
@@ -73,7 +75,7 @@ e-mail: \tt{dimchee90@gmail.com} \\
 \maketitle %\vspace{-0.5cm}
 
 \begin{abstract}
-Belmanov problem tra\v zenja najkra\' ceg izlaznog puta iz \v sume poznatog oblika je re\v sen za mali broj \v suma. Jedan od re\v senih slu\v cajeva je i traka ograni\v cena sa dve paralelne prave na udaljenosti 1. Ta\v cnije, jo\v s Zalgaler je prona\v sao najkra\' ci put \v sirine 1, dok je precizan dokaz optimalnosti ovog re\v senja prona\dj en dosta kasnije. Tako\dj e su istra\v zivani i najkra\' ci putevi \v sirine 1 u vi\v sim dimenzijama. Gomi je poo\v strio gornje ograni\v cenje za du\v zinu takvog puta u $\mathbb{R}^3$ i prona\v sao donje ograni\v cenje u $\mathbb{R}^n$. U ovom radu \' cemo predstaviti gornje ogrni\v cenje za du\v zinu ovakvog puta u $\mathbb{R}^n$, kao i jednu modifikaciju Belmanovog problema u kojoj vi\v se ljudi kre\' ce iz iste ta\v cke te se posmatra skup puteva sa zajedni\v ckim po\v cetkom. Dalje je pokazano jedno gornje ograni\v cenje za du\v zinu najkra\' ceg puta \v sirine 1 u $\mathbb{R}^n$, kao i jedno gornje ograni\v cenje pri posmatranoj modifikaciji. Dosada\v snji rad i intuicija ukazuju na to da je pri posmatranoj modifikaciji u $\mathbb{R}^n$ put za $n+1$ ljudi pokazan u ovom radu najkra\' ci modifikovani put \v sirine 1.
+Belmanov problem tra\v zenja najkra\' ceg izlaznog puta iz \v sume poznatog oblika je re\v sen za mali broj \v suma. Jedan od re\v senih slu\v cajeva je i traka ograni\v cena sa dve paralelne prave na udaljenosti 1. Ta\v cnije, jo\v s Zalgaler je prona\v sao najkra\' ci put \v sirine 1, dok je precizan dokaz optimalnosti ovog re\v senja prona\dj en dosta kasnije. Tako\dj e su istra\v zivani i najkra\' ci putevi \v sirine 1 u vi\v sim dimenzijama. Gomi je poo\v strio gornje ograni\v cenje za du\v zinu takvog puta u $\mathbb{R}^3$ i prona\v sao donje ograni\v cenje u $\mathbb{R}^n$. U ovom radu \' cemo predstaviti gornje ograni\v cenje za du\v zinu ovakvog puta u $\mathbb{R}^n$, kao i jednu modifikaciju Belmanovog problema u kojoj vi\v se ljudi kre\' ce iz iste ta\v cke te se posmatra skup puteva sa zajedni\v ckim po\v cetkom. Dalje je pokazano jedno gornje ograni\v cenje za du\v zinu najkra\' ceg puta \v sirine 1 u $\mathbb{R}^n$, kao i jedno gornje ograni\v cenje pri posmatranoj modifikaciji. Dosada\v snji rad i intuicija ukazuju na to da je pri posmatranoj modifikaciji u $\mathbb{R}^n$ put za $n+1$ ljudi pokazan u ovom radu najkra\' ci modifikovani put \v sirine 1.
 
 
 \end{abstract}
@@ -89,8 +91,8 @@ Originalni problem "Izgubljeni u \v sumi" je postavio Belman 1956. i on je glasi
 
 \indent Formalnije, problem se defini\v se kao "Koji je najkra\' ci izlazni put iz \v sume?", ako smo \v sumu i izlazni put definisali kao:
 \begin{df} \v Suma je zatvoren, konveksan planaran skup. \end{df}
-\begin{df} Put je neprekidan i rektifiabilan planaran luk.\end{df}
-\begin{df} Za put $P$ ka\v zemo da je izlazni put iz \v sume $F$ ako se put $P$ ne mo\v ze postaviti unutar \v sume $P$ bez presecanja njene granice.  \end{df}
+\begin{df} Put je neprekidan i rektifiabilna planarna kriva.\end{df}
+\begin{df} Za put $P$ ka\v zemo da je izlazni put iz \v sume $F$ ako se put $P$ ne mo\v ze postaviti unutar \v sume $P$ bez presecanja njenog ruba.  \end{df}
 \subsection[Neki poznati rezultati]{Neki poznati rezultati}
 \bigskip
 Re\v senje ovog problema je poznato za mali broj \v suma. Da bi se definisale neke klase \v suma za koje je problem re\v sen, potrebne su slede\' ce definicije:
@@ -101,26 +103,26 @@ Tri klase \v suma za koje je problem re\v sen su:
 \begin{enumerate}
 \item \textbf{"Debele" \v sume} iz kojih je najbolji izlazni put oblika du\v zi. \v Suma je "debela" ako je ograni\v cena i pokriva neki romb sa uglom od $60^\circ$ i velikom dijagonalom du\v zine svog dijametra.
 \\
-Neki primeri  "debelih" \v suma su kru\v znica i svi pravilni mnogouglovi ve\' ci od trougla.
-\item \textbf{"Tanke" \v sume} iz kojih je najbolji izlazni put oblika Zalgaller-ove putanje, koja je najkra\' ca putanja \v sirine 1. \v Suma je "tanka" ako se u nju mo\v ze upisati Zalgaller-ov pravougaonik, tako da njegove du\v ze stranice le\v ze na granici posmatrane \v sume. Zalgaller-ov pravougaonik je pravougaonik \v cija je kra\' ca stranica 1, a du\v za du\v zine Zalgaller-ove putanje.
+Neki primeri  "debelih" \v suma su kru\v znica i svi pravilni mnogouglovi sa vi\v se od 3 stranice.
+\item \textbf{"Tanke" \v sume} iz kojih je najbolji izlazni put oblika Zalgalerove putanje, koja je najkra\' ca putanja \v sirine 1. \v Suma je "tanka" ako se u nju mo\v ze upisati Zalgalerov pravougaonik, tako da njegove du\v ze stranice le\v ze na rubu posmatrane \v sume. Zalgalerov pravougaonik je pravougaonik \v cija je kra\' ca stranica 1, a du\v za du\v zine Zalgalerove putanje.
 \\
 Najpoznatiji primer "tanke" \v sume je \v suma koju obrazuju dve paralelne prave na udaljenosti 1.
-\item \textbf{Neki jednakokraki trouglovi} iz kojih je najbolji izlazni put Besicovitch-eva Z kriva.
+\item \textbf{Neki jednakokraki trouglovi} iz kojih je najbolji izlazni put Besikovi\v ceva "Z" kriva.
 \end{enumerate}
 \smallskip
 \subsection[Uop\v stenje problema]{Uop\v stenje problema}
 \bigskip
-Prvo, uop\v stimo ovaj problem na vi\v sedimenzione prostore. Za to je samo potrebno predefinisati \v sumu i put tako da vi\v se ne \v zive u $\mathbb{R}^2$, ve\' c u $\mathbb{R}^n$.
+Prvo, uop\v stimo ovaj problem na vi\v sedimenzione prostore. Za to je samo potrebno predefinisati \v sumu i put tako da vi\v se ne "\v zive" u $\mathbb{R}^2$, ve\' c u $\mathbb{R}^n$.
 \smallskip
 \begin{df} n-dimenziona \v suma je zatvoren, konveksan skup u $\mathbb{R}^n$.\end{df}
 \begin{df} n-dimenzioni put je neprekidan i rektifiabilan luk u $\mathbb{R}^n$.\end{df}
-\begin{df} Za n-dimenzioni put ka\v zemo da je izlazan iz n-dimenzione \v sume ako ne mo\v ze biti postavljen unutar nje bez presecanja njenih granica.\end{df}
+\begin{df} Za n-dimenzioni put ka\v zemo da je izlazan iz n-dimenzione \v sume ako ne mo\v ze biti postavljen unutar nje bez presecanja njenog ruba.\end{df}
 \begin{df} \v Sirina n-dimenzionog puta je najmanja udaljenost izme\dj u dve paralelne hiperravni takve da se taj put nalazi izme\dj u njih. \end{df}
 \smallskip
 
 \indent Drugo uop\v stenje koje \' ce biti posmatrano u ovom radu je problem vi\v se ljudi unutar \v sume. U kontekstu originalnog problema, pitanje bi bilo postavljeno kao:
 \begin{center}
-"Grupa od n ljudi je zajedno izgubljena unutar \v sume poznatog oblika i dimenzija. Koja je najmanja suma du\v zina puteva koje oni moraju da pre\dj u tako da znaju da \' ce barem jedan od njih iza\' ci iz \v sume?"
+"Grupa od $n$ ljudi je zajedno izgubljena unutar \v sume poznatog oblika i dimenzija. Koja je najmanja suma du\v zina puteva koje oni moraju da pre\dj u tako da znaju da \' ce barem jedan od njih iza\' ci iz \v sume?"
 \end{center}
 \newpage
 Formalno, to bi se definisalo kao:
@@ -129,7 +131,7 @@ Formalno, to bi se definisalo kao:
 \begin{df} Za put za k ljudi $P_n$ ka\v zemo da je izlazan put iz \v sume $F$ ako za bilo koji po\v cetni polo\v zaj, barem jedan od n puteva iz skupa izlazi iz $F$.\end{df}
 \smallskip
 
-\indent Na primer, iz \v sume u $\mathbb{R}^2$ ograni\v cene sa dve prave na udaljenosti 1 je za jednu osobu najkra\' ci izlazni put Zalgaller-ova putanja, koja je du\v zine oko 2.278291644, a za tri \v coveka je jedan od izlaznih puteva cine tri du\v zi du\v zine $\frac{2}{3}$ pod uglovima od $120^\circ$. Ovaj izlazni put za 3 osobe ima du\v zinu 2, te je kra\' ci od Zalgaller-ove krive.
+\indent Na primer, iz \v sume u $\mathbb{R}^2$ ograni\v cene sa dve prave na udaljenosti 1 je za jednu osobu najkra\' ci izlazni put Zalgalerova putanja, koja je du\v zine oko 2.278291644, a za tri \v coveka je jedan od izlaznih puteva \v cine tri du\v zi du\v zine $\frac{2}{3}$ pod uglovima od $120^\circ$. Ovaj izlazni put za 3 osobe ima du\v zinu 2, te je kra\' ci od Zalgalerove krive.
 \\
 \smallskip
 \\
@@ -140,16 +142,16 @@ Formalno, to bi se definisalo kao:
 Formalnije, ako je za \v sumu $F$ du\v zina najkra\' ceg izlaznog puta za $k$ ljudi $S_k(F)$, tra\v zi se:
 $$S(F)=\lim_{n \to \infty} S_n(F)$$
 
-\indent Ovaj limes je definisan jer je niz $S_n(F)$ nerastu\' ci, jer u izlaznom putu za k+1 ljudi, jedan \v covek mo\v ze da stoji i stoga $S_{k+1}(F)\leqslant S_{k}(F)$. Ovaj niz je tako\dj e ograni\v cen odozdo sa nulom jer ozna\v cava sumu nekih du\v zina, te ovaj limes mora da postoji. 
+\indent Ovaj limes je definisan jer je niz $S_n(F)$ nerastu\' ci, jer u izlaznom putu za $k+1$ ljudi, jedan \v covek mo\v ze da stoji i stoga $S_{k+1}(F)\leqslant S_{k}(F)$. Ovaj niz je tako\dj e ograni\v cen odozdo nulom jer ozna\v cava sumu nekih du\v zina, te ovaj limes mora da postoji. 
 \\
-\section[Traka u n dimenzija]{Traka u n dimenzija}
+\section[Traka u $n$ dimenzija]{Traka u $n$ dimenzija}
 \bigskip
- Sli\v cno problemu \v sume oblika beskona\v cne trake, posmatra\' cemo \v sume u $\mathbb{R}^n$ ograni\v cene sa dve paralelne hiperravni na rastojanju 1. Ovako definisanu \v sumu u $\mathbb{R}^n$ zovimo \textbf{trakom u n dimenzija} i ozna\v cimo je sa $T_n$.
+ Sli\v cno problemu \v sume oblika beskona\v cne trake, posmatra\' cemo \v sume u $\mathbb{R}^n$ ograni\v cene sa dve paralelne hiperravni na rastojanju 1. Ovako definisanu \v sumu u $\mathbb{R}^n$ zovimo \textbf{trakom u $n$ dimenzija} i ozna\v cimo je sa $T_n$.
 \\
 \\
-\indent \v Sume ovog oblika su ve\' c posmatrane u kontekstu ispitivanja \v sirina putanja, po\v sto va\v zi ekvivalencija izme\dj u toga da n-dimenzioni put ima \v sirinu barem jedan i da je izlazna za \v sumu $T_n$. Ghomi je 2018. pokazao da va\v zhi:
+\indent \v Sume ovog oblika su ve\' c posmatrane u kontekstu ispitivanja \v sirina putanja, po\v sto va\v zi ekvivalencija izme\dj u toga da $n$-dimenzioni put ima \v sirinu barem jedan i da je izlazna za \v sumu $T_n$. Gomi je 2018. pokazao da va\v zhi:
 \smallskip
-\begin{teo}[Ghomi] 
+\begin{teo}[Gomi] 
 Neka je $\gamma: [a,b]\to \mathbb{R}^n$ rektifiabilan luk i neka je $L$ njena du\v zina i $\omega$ njena \v sirina. Tada va\v zi:
 $$\frac{L}{\omega}\geqslant \sqrt{2.2782^2+9(n-2)}$$
 \end{teo}
@@ -158,7 +160,7 @@ $$\frac{L}{\omega}\geqslant \sqrt{2.2782^2+9(n-2)}$$
 \indent Stoga, donje ograni\v cenje du\v zine izlaznog puta iz $T_n$ je $ \sqrt{2.2782^2+9(n-2)}$.
 \\
 \\
-Zalgaller je konstruisao put u $\mathbb{R}^3$ jedini\v cne \v sirine i du\v zine ne ve\' ce od 3.9215, \v sto je blizu ograni\v cenja 3.7669 dobijenog Teoremom 2.1.
+Zalgaler je konstruisao put u $\mathbb{R}^3$ jedini\v cne \v sirine i du\v zine ne ve\' ce od 3.9215, \v sto je blizu ograni\v cenja 3.7669 dobijenog Teoremom 2.1.
 \\
 \begin{pred} $S(T_n)=S_{n+1}(T_n)=\sqrt{n\cdot\left\lceil\frac{n}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}$.\end{pred}
 \smallskip
@@ -170,10 +172,10 @@ Zalgaller je konstruisao put u $\mathbb{R}^3$ jedini\v cne \v sirine i du\v zine
 \subsection[Minimalan simpleks]{Minimalan simpleks}
 \bigskip
 
-\indent Slede\' ce tvr\dj enje daje gornje ograni\v cenje za najmanje dimenzije pravilnog n-simpleksa koji se ne mo\v ze postaviti unutar trake u n dimenzija. Iz njega sledi gornje ograni\v cenje za izlaznu putanju iz ovakve \v sume u $\mathbb{R}^n$ za jednog \v coveka, kao i gornje ograni\v cenje tog puta za $n+1$ ljudi. 
+\indent Slede\' ce tvr\dj enje daje gornje ograni\v cenje za najmanje dimenzije pravilnog n-simpleksa koji se ne mo\v ze postaviti unutar trake u $n$ dimenzija. Iz njega sledi gornje ograni\v cenje za izlaznu putanju iz ovakve \v sume u $\mathbb{R}^n$ za jednog \v coveka, kao i gornje ograni\v cenje tog puta za $n+1$ ljudi. 
 \smallskip
 
-\begin{tvr} Izme\dj u dve hiperravni u $\mathbb{R}^n$ na udaljenosti 1 se ne mo\v ze postaviti pravilan n-simpleks stranice $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$ tako da ga ni jedna od ove dve hiperravni ne se\v ce.
+\begin{tvr} Izme\dj u dve hiperravni u $\mathbb{R}^n$ na udaljenosti 1 se ne mo\v ze postaviti pravilan $n$-simpleks stranice $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$ tako da ga ni jedna od ove dve hiperravni ne se\v ce.
 \end{tvr}
 
 \begin{proof}
@@ -185,7 +187,7 @@ $$A_{n+1}=(-1,0,0,..., 0, 1)$$
 Ovaj simpleks, iako je definisan u $\mathbb{R}^{n+1}$ ima n dimenzija, tj. pripada potprostoru $\mathbb{R}^n$. 
  \\
 \\
-\indent Po\v sto \v zelimo da na\dj emo maksimalan n-simpleks koji mo\v zemo postaviti unutar trake u n dimenzija, to je ekvivalentno tome da za fiksan n-simpleks na\dj emo minimalnu udaljenost izme\dj u dva potprostora dimenzije $n-1$ takvih da kako god da simpleks stoji izme\dj u njih, neka od njih ga sigurno se\v ce posmatrani simpleks.
+\indent Po\v sto \v zelimo da na\dj emo maksimalan n-simpleks koji mo\v zemo postaviti unutar trake u $n$ dimenzija, to je ekvivalentno tome da za fiksan $n$-simpleks na\dj emo minimalnu udaljenost izme\dj u dva paralelna potprostora dimenzije $n-1$ takvih da kako god da simpleks stoji izme\dj u njih, neka od njih sigurno se\v ce posmatrani simpleks.
 \\
 \\
 \indent Posmatrajmo neki $(n-1)$-dimenzioni potprostor koji sadr\v zi teme $A_1$ i pripada potprostoru generisanom ta\v ckama $A_1, A_2,..., A_{n+1}$, takav da su ta\v cke $A_2, A_3,..., A_{n+1}$ sa iste strane ovog potprostora. Neka je $\vv{x}=(x_1, x_2,..., x_{n+1})$ jedini\v cni vektor normalan na ovaj potprostor. Za njega tako\dj e va\v zi da pripada potprostoru generisanom ta\v ckama $A_1, A_2,..., A_{n+1}$, te za njega va\v zi da je linearna kombinacija vektora $\vv{A_1A_2}, \vv{A_1A_3},...,\vv{A_1 A_{n+1}}$.
@@ -205,7 +207,7 @@ $$l_2=(-1, 1, 0,..., 0)\cdot (x_1, x_2, x_3,..., x_{n+1})=x_2-x_1$$
 $$l_3=x_3-x_1$$
 $$...$$
 $$l_{n+1}=x_{n+1}-x_1$$
-Po\v sto su $A_2, A_3,..., A_{n+1}$ sa iste strane potprostora na koji je normalan vektor $\vv{x}$, ovi skalarni proizvodi su svi istog znaka. Bez umanjenja op\v steg, recimo da su nenegativni.
+Po\v sto su $A_2, A_3,..., A_{n+1}$ sa iste strane potprostora na koji je normalan vektor $\vv{x}$, ovi skalarni proizvodi su svi istog znaka. Bez umanjenja op\v stosti, recimo da su nenegativni.
 Predstavimo $x_1, x_2,..., x_{n+1}$ u funkciji od $l_2, l_3,..., l_{n+1}$:
 $$x_1=-\frac{l_2+l_3+...+l_{n+1}}{n+1}$$
 $$x_2=\frac{n\cdot l_2-l_3-l_4-...-l_{n+1}}{n+1}$$
@@ -217,12 +219,12 @@ $$x_{n+1}=\frac{-l_2-l_3-l_4-...+n\cdot l_{n+1}}{n+1}$$
 $$x_1^2+ x_2^2+...+x_{n+1}^2=1$$
 $$\Rightarrow \left(\frac{-l_2-l_3-...-l_{n+1}}{n+1}\right)^2+\left(\frac{n\cdot l_2-l_3-...-l_{n+1}}{n+1}\right)^2+...+\left(\frac{-l_2-l_3-...+n\cdot l_{n+1}}{n+1}\right)^2=1$$
 $$\Rightarrow \frac{1}{(n+1)^2}\left[ (n^2+n)\cdot {\sum_{i=2}^{n+1} {l_i^2}} - (2n+2)\cdot {\sum_{i=2, i<j}^{n+1} {l_i\cdot l_j} } \right]=1$$
-$$\Rightarrow n\cdot {\sum_{i=2}^{n+1} {l_i^2}} - 2\cdot {\sum_{i=2,  i<j}^{n+1} {l_i\cdot l_j} } =n+1$$
+$$\Rightarrow n\cdot {\sum_{i=2}^{n+1} {l_i^2}} - 2\cdot {\sum_{\substack{ i=2\\ i<j}}^{n+1} {l_i\cdot l_j} } =n+1$$
 \\
 \indent Problem koji poku\v avamo da re\v simo je da na\dj emo najve\' cu udaljenost na koju mo\v zemo da postavimo drugi $(n-1)$-dimenzioni potprostor paralelan posmatranom, tako da on sigurno se\v ce posmatrani simpleks. Primetimo da je tra\v zena udaljenost ta\v cno minimum po svim posmatranim $(n-1)$-dimenzionim potprostorima od $max\{l_2, l_3,..., l_{n+1}\}$.
 \\
 \\
-\indent U ovom izrazu figuri\v su samo $l_2, l_3,..., l_{n+1}$, te iz njega \v zelimo da pronadjemo ovu vrednost. Potrebno nam je bilo koje ogrni\v cenje za ovu vrednost, ali smatramo da se optimalna vrednost dobija kada je polovina ovih udaljenosti 0, tj. polovina temena pripada posmatranom $(n-1)$-dimenzionom potprostoru, a druga polovina je na jednakoj udaljenosti od nje, tj. $l_2=l_3=...=l_{\lceil \frac{n}{2}\rceil+1}=l$. Time se dobija:
+\indent U ovom izrazu figuri\v su samo $l_2, l_3,..., l_{n+1}$, te iz njega \v zelimo da pronadjemo ovu vrednost. Potrebno nam je bilo koje ograni\v cenje za ovu vrednost, ali smatramo da se optimalna vrednost dobija kada je polovina ovih udaljenosti 0, tj. polovina temena pripada posmatranom $(n-1)$-dimenzionom potprostoru, a druga polovina je na jednakoj udaljenosti od nje, tj. $l_2=l_3=...=l_{\lceil \frac{n}{2}\rceil+1}=l$. Time se dobija:
 $$n\cdot \left \lceil{\frac{n}{2}}\right \rceil\cdot l^2-2\cdot {{\lceil{\frac{n}{2}}\rceil}\choose {2}}\cdot l^2=n+1$$
 $$\left( n\cdot \left \lceil \frac{n}{2} \right \rceil - {\left \lceil \frac{n}{2} \right\rceil} \cdot \left( \left \lceil \frac{n}{2}\right \rceil -1 \right) \right) \cdot l^2=n+1$$
 $$\left \lceil \frac{n}{2} \right \rceil \cdot \left( n-\left \lceil \frac{n}{2}\right \rceil +1 \right)\cdot l^2=n+1$$
@@ -231,22 +233,22 @@ $$\Rightarrow l=\sqrt{\frac{n+1}{\left\lceil \frac{n}{2}\right\rceil \cdot \left
 Po\v sto je stranica ovog simpleksa du\v zine $\sqrt2$, odnos stranice simpleksa i udaljenosti dva $(n-1)$-dimenziona potprostora izme\dj u  kojih se taj tetraedar ne mo\v ze postaviti izme\dj u njih je:
 $$\frac{\sqrt2}{l}=\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$$
 \\
-Stoga, izme\dj u dva paralelna $(n-1)$-dimenziona potprostora na udaljenosti $1$ ne mo\v ze da se postavi n-simpleks stranice  $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$.
+Stoga, izme\dj u dva paralelna $(n-1)$-dimenziona potprostora na udaljenosti $1$ ne mo\v ze da se postavi $n$-simpleks stranice  $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$.
 \\
 $\square$
 \end{proof}
 \\
 \subsection[Jedan \v covek]{Jedan \v covek}
 \bigskip
-\begin{teo} Put koji formiraju po trojkama nekoplanarne ivice $n-simpleksa$ \v cije su ivice du\v zine $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$ je izlazni put iz trake u n dimenzija i taj put ima du\v zinu:
+\begin{teo} Put koji formiraju po trojkama nekoplanarne ivice $n$-simpleksa \v cije su ivice du\v zine $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$ je izlazni put iz trake u n dimenzija i taj put ima du\v zinu:
 $$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}.$$\end{teo}
 \smallskip
 
 \begin{proof}
-Po Teoremi 2.1, ovaj simpleks se ne mo\v ze postaviti izme\dj u posmatranih potprostora, tj. barem jedna od granica \v sume se\v ce simpleks, kako god ga postavili u \v sumi.
+Po Teoremi 2.1, ovaj simpleks se ne mo\v ze postaviti izme\dj u posmatranih potprostora, tj. rub \v sume se\v ce simpleks, kako god ga postavili u \v sumi.
 \\
 \\
-\indent Po\v sto postoji put po nekoplanarnim ivicama simpleksa koji obilazi sva temena i on je neprekidan i konveksni omota\v c tog puta je ba\v s ovaj simpleks. Zato \v sto posmatrani simpleks izlazi iz ove \v sume, tj. jedan od ova dva $(n-1)$-dimenziona potprostora ga se\v ce, on mora da se\v ce i put \v ciji je taj simpleks konveksni omota\v c. Stoga, ova putanja je izlazna i ima du\v zinu:
+\indent Po\v sto postoji put po nekomplanarnim ivicama simpleksa koji obilazi sva temena i on je neprekidan i konveksni omota\v c tog puta je ba\v s ovaj simpleks. Zato \v sto posmatrani simpleks izlazi iz ove \v sume, tj. jedan od ova dva $(n-1)$-dimenziona potprostora ga se\v ce, on mora da se\v ce i put \v ciji je taj simpleks konveksni omota\v c. Stoga, ova putanja je izlazna i ima du\v zinu:
 \\
 $$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}.$$
 \\
@@ -259,7 +261,7 @@ $$S_1(T_n)\leqslant L_{n, 1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n}{2}\right\r
 \\
 \subsection[n+1 \v covek]{n+1 \v covek} 
 \bigskip
-\begin{teo} Put koji formira $n+1$ du\v zi od centra do svih temena pravilnog $n$-simpleksa  \v cije su ivice du\v zine $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$ je izlazni put za $n+1$ ljudi iz trake u n dimenzija i taj put ima du\v zinu:
+\begin{teo} Put koji formira $n+1$ du\v zi od centra do svih temena pravilnog $n$-simpleksa  \v cije su ivice du\v zine $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$ je izlazni put za $n+1$ ljudi iz trake u $n$ dimenzija i taj put ima du\v zinu:
 
 $$L_{n,n+1}=\sqrt{n\cdot\left\lceil\frac{n}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}$$.\end{teo}
 
@@ -283,24 +285,24 @@ $\square$
 \indent Stoga, va\v zi slede\' ce:
 $$S_{n+1}(T_n)\leqslant L_{n,n+1}= \sqrt{n\cdot\left\lceil\frac{n}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n}{2}\right\rceil +1\right)}$$
 
-\section[k-traka u n dimenzija]{k-traka u n dimenzija}
+\section[$k$-traka u $n$ dimenzija]{$k$-traka u $n$ dimenzija}
 \bigskip
-\indent Traka u n dimenzija predstavlja upo\v stenje klasi\v cnog primera \v sume u $\mathbb{R}^2$ ograni\v cene sa dve paralelne prave na udaljenosti 1. Ovo je uop\v stenje koje nastaje interpretacijom ove \v sume kao prostora ograni\v cenog hiperravnima u nekom prostoru i u slu\v caju $\mathbb{R}^2$ je to jedina takva \v suma koju ima smisla posmatrati. U prostorima vi\v sih dimenzija od $\mathbb{R}^2$ to nije slu\v caj.
+\indent Traka u $n$ dimenzija predstavlja upo\v stenje klasi\v cnog primera \v sume u $\mathbb{R}^2$ ograni\v cene sa dve paralelne prave na udaljenosti 1. Ovo je uop\v stenje koje nastaje interpretacijom ove \v sume kao prostora ograni\v cenog hiperravnima u nekom prostoru i u slu\v caju $\mathbb{R}^2$ je to jedina takva \v suma koju ima smisla posmatrati. U prostorima vi\v sih dimenzija od $\mathbb{R}^2$ to nije slu\v caj.
 \\
 \smallskip
 \\
-\indent Defini\v simo \textbf{k-traku u n dimenzija} za svako prirodno n i za svako $1\leqslant k\leqslant n-1$  kao \v sumu odredjenu svim ta\v ckama iz $\mathbb{R}^n$ na udaljenosti manjoj ili jednakoj $\frac{1}{2}$ od nekog k-dimenzionog potprostora $\mathbb{R}^n$. 
+\indent Defini\v simo \textbf{$k$-traku u $n$ dimenzija} za svako prirodno $n$ i za svako $1\leqslant k\leqslant n-1$  kao \v sumu odredjenu svim ta\v ckama iz $\mathbb{R}^n$ na udaljenosti manjoj ili jednakoj $\frac{1}{2}$ od nekog $k$-dimenzionog potprostora $\mathbb{R}^n$. 
 \\
-\begin{teo} Najkra\' ca izlazna putanja iz k-trake u $\mathbb{R}^n$ je ista kao najkra\' ca izlazna putanja iz trake u $\mathbb{R}^{k+1}$.\end{teo}
+\begin{teo} Najkra\' ca izlazna putanja iz $k$-trake u $\mathbb{R}^n$ je ista kao najkra\' ca izlazna putanja iz trake u $\mathbb{R}^{k+1}$.\end{teo}
 
 \begin{proof}
-Posmatrajmo presek nekog potprostora dimenzije k+1 i k-trake. Taj presek \' ce o\v cigledno pripadati projekciji k-trake na ovaj potprostor.
+Posmatrajmo presek nekog potprostora dimenzije $k+1$ i $k$-trake u $n$ dimenzija. Taj presek \' ce o\v cigledno pripadati projekciji posmatrane trake na ovaj potprostor.
 \\
 \\
-\indent  Svaka ta\v cka k-trake u $\mathbb{R}^n$ se mo\v ze predstaviti kao zbir neke ta\v cke koja pripada unutra\v snjosti sfere jedini\v cnog pre\v cnika $\mathbb{S}^{n-k}$ i nekog vektora iz linearno nezavisnog potprostora $\mathbb{R}^k$. To zna\v ci da \' ce projekcija k-trake na bilo koji potprostor dimenzije k+1 imati jedini\v cnu \v sirinu. Ovo zna\v ci da je izlazna putanja iz trake u  $\mathbb{R}^{k+1}$ dovoljna. 
+\indent  Svaka ta\v cka $k$-trake u $\mathbb{R}^n$ se mo\v ze predstaviti kao zbir neke ta\v cke koja pripada unutra\v snjosti sfere jedini\v cnog pre\v cnika $\mathbb{S}^{n-k}$ i nekog vektora iz potprostora $\mathbb{R}^k$ linearno nezavisnog podprostoru u kom se nalazi ta sfera. To zna\v ci da \' ce projekcija $k$-trake na bilo koji potprostor dimenzije $k+1$ imati jedini\v cnu \v sirinu. Stoga izlazna putanja iz trake u  $\mathbb{R}^{k+1}$ je dovoljna za izlazak iz $k$- trake u $\mathbb{R}^n$. 
 \\
 \\
-\indent Ako uzmemo potprostor dimenzije k+1 \v generisan istim k potprostorom kojim je generisana traka, i proizvoljnim vektorom sa sfere, projekcija k-trake na njega bi\' ce ba\v s traka u potprostoru $\mathbb{R}^{k+1}$ , \v cime je dokaz kompletan.
+\indent Ako uzmemo potprostor dimenzije $k+1$ \v generisan istim $k$ potprostorom kojim je generisana traka, i proizvoljnim vektorom sa sfere, projekcija $k$-trake na njega bi\' ce ba\v s traka u potprostoru $\mathbb{R}^{k+1}$ , \v cime je dokaz kompletan.
 $\square$
 \end{proof}
 \\
@@ -308,6 +310,7 @@ $\square$
 \section[Traka u $\mathbb{R}^2$ sa proizvoljnim brojem ljudi]{Traka u $\mathbb{R}^2$ sa proizvoljnim brojem ljudi}
 
 \begin{lem} Za \v sumu $F$ u $\mathbb{R}^n$ va\v zi: $$S_1(F)=S_2(F).$$\end{lem}
+
 \begin{proof}
 Za svaki izlazni put za jednog \v coveka postoji ekvivalentan izlazni put za dvojicu jer ako dva \v coveka krenu iz bilo koje ta\v cke tog puta i u suprotnim smerovima ga prate, obrazova\' ce isti put. Sli\v cno, za svaki izlazni put za dva \v coveka postoji ekvivalentan put za jednog \v coveka tako \v sto jedan \v covek ide putem koji bi formirao da krene iz krajnje pozicije na putu jednog od dva \v coveka i prati taj put do krajnje pozicije drugog.
 $\square$
@@ -317,10 +320,10 @@ $\square$
 \end{teo}
 
 \begin{proof}
-Neka je konveksni omota\v c puta $\bigtriangleup ABC$ i neka je po\v cetna ta\v cka puta ta\v cka $X$ (unutar $\bigtriangleup ABC$). Da bi ovo bio konveksni omota\v c posmatranog puta, neki od ljudi koji kre\' cu iz X svakako moraju da u nekom trenutku pro\dj u i kroz ta\v cku $A$, $B$ i $C$. Kada bi iz ta\v cke $X$ kretalo vi\v se od 3 osobe, svakako neka tri \v coveka (ili manje) od njih moraju da pro\dj u kroz ova tri temena trougla, a ostali nikako ne doprinose obliku konveksnog omota\v ca, te su bespotrebni, tj. kada svi ljudi osim te trojice koji prolaze kroz temena ne bi krenuli, put bi bio kra\' ci. Stoga, optimalno je da krene najvi\v se tri osobe. 
+Neka je konveksni omota\v c puta $\bigtriangleup ABC$ i neka je po\v cetna ta\v cka puta ta\v cka $X$ (unutar $\bigtriangleup ABC$). Da bi ovo bio konveksni omota\v c posmatranog puta, neki od ljudi koji kre\' cu iz $X$ svakako moraju da u nekom trenutku pro\dj u i kroz ta\v cku $A$, $B$ i $C$. Kada bi iz ta\v cke $X$ kretalo vi\v se od 3 osobe, svakako neka tri \v coveka (ili manje) od njih moraju da pro\dj u kroz ova tri temena trougla, a ostali nikako ne doprinose obliku konveksnog omota\v ca, te su bespotrebni, tj. kada svi ljudi osim te trojice koji prolaze kroz temena ne bi krenuli, put bi bio kra\' ci. Stoga, optimalno je da krene najvi\v se tri osobe. 
 \\
 \\
-\indent Ako za $\bigtriangleup ABC$ va\v zi da su mu svi uglovi neve\' ci od $120^\circ$, poznato je da je geometrijska medijana temena ovog trougla njegova Tori\v celijeva ta\v cka. Put koji obrazuje troje ljudi koji kre\' cu iz Tori\v celijeve ta\v cke i svaki ide do jednog temena je kra\' ci od bilo kog puta za jednog \v coveka, jer bi taj put morao da pro\dj e kroz sva temena, tj. najkra\' ci put za jednog \v coveka bi bio polaze\' ci od jednog temena uz dve najkra\' ce stranice, \v sto je du\v ze od puta iz Tori\v celijeve ta\v cke (ina\v ce bi geometrijska medijana bilo teme u kom se spajaju dve najkra\' ce stranice, \v sto ne va\v zi).
+\indent Ako za $\bigtriangleup ABC$ va\v zi da su mu svi uglovi ne ve\' ci od $120^\circ$, poznato je da je geometrijska medijana temena ovog trougla njegova Tori\v celijeva ta\v cka. Put koji obrazuje troje ljudi koji kre\' cu iz Tori\v celijeve ta\v cke i svaki ide do jednog temena je kra\' ci od bilo kog puta za jednog \v coveka, jer bi taj put morao da pro\dj e kroz sva temena, tj. najkra\' ci put za jednog \v coveka bi bio polaze\' ci od jednog temena uz dve najkra\' ce stranice, \v sto je du\v ze od puta iz Tori\v celijeve ta\v cke (ina\v ce bi geometrijska medijana bila teme u kom se spajaju dve najkra\' ce stranice, \v sto ne va\v zi).
 \\
 \\
 \indent Stoga, $X$ je Tori\v celijeva ta\v cka $\bigtriangleup ABC$. Neka su $h_a, h_b, h_c$ redom visine iz temena $A, B, C$ i neka je $x=|AX|, y=|BX|, z=|CX|$. Da bi put sa ovim konveksnim omota\v cem bio izlazan iz $T_2$, mora va\v ziti $min\{h_a,h_b,h_c\}\geqslant 1$, s tim da se tra\v zi minimalna suma $x+y+z$ pri kojoj to va\v zi.
@@ -332,7 +335,7 @@ Neka je konveksni omota\v c puta $\bigtriangleup ABC$ i neka je po\v cetna ta\v 
 \indent Bez umanjenja op\v steg, neka je $h_a\leqslant h_b\leqslant h_c$, tj. $x\leqslant y\leqslant z$. Va\v zi slede\' ce:
 \begin{center}
 $$P(\bigtriangleup ABC)=\frac{h_a\cdot BC}{2}=P(\bigtriangleup ABX)+P(\bigtriangleup BCX)+P(\bigtriangleup CAX)=$$
-$$=\frac{xy\cdot sin(\angle AXB)}{2}+\frac{yz\cdot sin(\angle BXC)}{2}+\frac{zx\cdot sin(\angle CXA)}{2}=\frac{\sqrt3}{4}\cdot(xy+yz+zx)$$
+$$=\frac{xy\cdot \sin{(\angle AXB)}}{2}+\frac{yz\cdot \sin{(\angle BXC)}}{2}+\frac{zx\cdot \sin(\angle CXA)}{2}=\frac{\sqrt3}{4}\cdot(xy+yz+zx)$$
 $$\Longrightarrow h_a=\frac{\sqrt3}{2}\cdot \frac{xy+yz+zx}{2BC}.$$
 \end{center}
 \end{proof} 
@@ -359,10 +362,10 @@ tj. $c=2$. Ovo je slu\v caj gde je $\bigtriangleup ABC$ jednakostrani\v can i $X
 \\
 \\
 \indent Ponovo je uslov da ovaj put bude izlazan iz $T_2$ da su sve visine ovog trougla du\v zine barem 1, tj. da je $h_a\geqslant 1$ i va\v zi:
-$$P(\bigtriangleup ABC)=\frac{1}{2} h_a \cdot BC=\frac{1}{2} \cdot AB\cdot CA \cdot sin(\angle BAC)$$
-$$\Longrightarrow h_a=\frac{ AB\cdot CA \cdot sin(\angle BAC)}{BC}=sin(\angle CBA)\cdot AB\geqslant 1$$
+$$P(\bigtriangleup ABC)=\frac{1}{2} h_a \cdot BC=\frac{1}{2} \cdot AB\cdot CA \cdot \sin(\angle BAC)$$
+$$\Longrightarrow h_a=\frac{ AB\cdot CA \cdot \sin(\angle BAC)}{BC}=sin(\angle CBA)\cdot AB\geqslant 1$$
 \\
-\indent Po\v sto je $\angle BAC>120^\circ$, tada je $\angle CBA<30^\circ$, tj. $sin(\angle CBA)<\frac{1}{2}$, mora va\v ziti $AB>2$, te mora va\v ziti i $AB+CA>2$, pa ovaj slu\v caj ne mo\v ze biti bolji od prethodnog.
+\indent Po\v sto je $\angle BAC>120^\circ$, tada je $\angle CBA<30^\circ$, tj. $\sin(\angle CBA)<\frac{1}{2}$, mora va\v ziti $AB>2$, te mora va\v ziti i $AB+CA>2$, te ovaj slu\v caj ne mo\v ze biti bolji od prethodnog, \v cime je dokaz kompletan.
 \\
 $\square$
 \bigskip
