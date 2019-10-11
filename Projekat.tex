@@ -230,7 +230,7 @@ $$\left( n\cdot \left \lceil \frac{n}{2} \right \rceil - {\left \lceil \frac{n}{
 $$\left \lceil \frac{n}{2} \right \rceil \cdot \left( n-\left \lceil \frac{n}{2}\right \rceil +1 \right)\cdot l^2=n+1$$
 $$\Rightarrow l=\sqrt{\frac{n+1}{\left\lceil \frac{n}{2}\right\rceil \cdot \left( n-\left\lceil \frac{n}{2}\right\rceil+1\right)}}$$
 \\
-Po\v sto je stranica ovog simpleksa du\v zine $\sqrt2$, odnos stranice simpleksa i udaljenosti dva $(n-1)$-dimenziona potprostora izme\dj u  kojih se taj tetraedar ne mo\v ze postaviti izme\dj u njih je:
+Po\v sto je stranica ovog simpleksa du\v zine $\sqrt2$, odnos stranice simpleksa i udaljenosti dva $(n-1)$-dimenziona potprostora izme\dj u  kojih se taj simpleks ne mo\v ze postaviti izme\dj u njih je:
 $$\frac{\sqrt2}{l}=\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$$
 \\
 Stoga, izme\dj u dva paralelna $(n-1)$-dimenziona potprostora na udaljenosti $1$ ne mo\v ze da se postavi $n$-simpleks stranice  $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$.
@@ -302,7 +302,7 @@ Posmatrajmo presek nekog potprostora dimenzije $k+1$ i $k$-trake u $n$ dimenzija
 \indent  Svaka ta\v cka $k$-trake u $\mathbb{R}^n$ se mo\v ze predstaviti kao zbir neke ta\v cke koja pripada unutra\v snjosti sfere jedini\v cnog pre\v cnika $\mathbb{S}^{n-k}$ i nekog vektora iz potprostora $\mathbb{R}^k$ linearno nezavisnog podprostoru u kom se nalazi ta sfera. To zna\v ci da \' ce projekcija $k$-trake na bilo koji potprostor dimenzije $k+1$ imati jedini\v cnu \v sirinu. Stoga izlazna putanja iz trake u  $\mathbb{R}^{k+1}$ je dovoljna za izlazak iz $k$- trake u $\mathbb{R}^n$. 
 \\
 \\
-\indent Ako uzmemo potprostor dimenzije $k+1$ \v generisan istim $k$ potprostorom kojim je generisana traka, i proizvoljnim vektorom sa sfere, projekcija $k$-trake na njega bi\' ce ba\v s traka u potprostoru $\mathbb{R}^{k+1}$ , \v cime je dokaz kompletan.
+\indent Ako uzmemo potprostor dimenzije $k+1$  generisan istim $k$ potprostorom kojim je generisana traka, i proizvoljnim vektorom sa sfere, projekcija $k$-trake na njega bi\' ce ba\v s traka u potprostoru $\mathbb{R}^{k+1}$ , \v cime je dokaz kompletan.
 $\square$
 \end{proof}
 \\
@@ -316,6 +316,18 @@ Za svaki izlazni put za jednog \v coveka postoji ekvivalentan izlazni put za dvo
 $\square$
 \end{proof}
 \\
+\begin{df} Geometrijska medijana skupa ta\v caka $S=\{ X_1, X_2, ..., X_m\}$, gde su $X_i\in \mathbb{R}^n$ je ta\v cka $M\in \mathbb{R}^n$ za kogu va\v zi:
+$$\underset{M\in \mathbb{R}^n}{\arg\min} \sum^m_{i=1}{d(X_i, M)}, $$
+gde je za $A,B\in \mathbb{R}^n$ $d(A, B)$ Euklidska razdaljina izme\dj u ta\v caka $A$ i $B.$\end{df}
+\begin{df} Tori\v celijeva ta\v cka je geometrijska medijana trougla. \end{df}
+\indent Za Tori\v celijevu ta\v cku su poznata svojstva:
+\begin{enumerate}
+\item Ako je u $\bigtriangleup ABC$ jedan od uglova ve\' ci od $120^\circ$, Tori\v celijeva ta\v cka $\bigtriangleup ABC$ je teme tog ugla.
+\item Ako su u $\bigtriangleup ABC$ svi uglovi ne ve\' ci od $120^\circ$,Tori\v celijeva ta\v cka $\bigtriangleup ABC$ je ta\v cka $X$ takva da va\v zi:
+$$\angle AXB=\angle BXC= \angle CXA=120^\circ$$
+\end{enumerate}
+
+
 \begin{teo} Najkra\' ci izlazni put iz $T_2$ \v ciji je konveksni omota\v c trougao je du\v zine 2. Ta\v cnije, to je put za troje ljudi koji kre\' cu iz centra jednakostrani\v cnog trougla i svaki \v covek ide ka jednom od temena.
 \end{teo}
 
