@@ -165,7 +165,7 @@ Zalgaler je konstruisao put u $\mathbb{R}^3$ jedini\v cne \v sirine i du\v zine 
 \begin{pred} $S(T_n)=S_{n+1}(T_n)=\sqrt{n\cdot\left\lceil\frac{n}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}$.\end{pred}
 \smallskip
 
-\indent Intuicija iza postavljanja ovog predloga je to \v sto se na primerima $\mathbb{R}^2$ i $\mathbb{R}^3$ ispostavlja da je put posmatran dalje u ovom poglavlju sa 3, odnosno 4 osobe kra\' ci od najkra\' ceg mogu\' ceg puta za jednog \v coveka. Tako\dj e je konveksni omota\v c ovih puteva ,,najmanje" telo koje postoji u posmatranom prostoru, tj. simpleks i ovaj put deluje kao najkra\' ci put \v ciji je ovo konveksni omota\v c.
+\indent Intuicija iza postavljanja ovog predloga je to \v sto se na primerima $\mathbb{R}^2$ i $\mathbb{R}^3$ ispostavlja da je put posmatran dalje u ovom poglavlju sa 3, odnosno 4 osobe kra\' ci od najkra\' ceg mogu\' ceg puta za jednog \v coveka. Tako\dj e, konveksni omota\v c posmatranih puteva je simpleks u odgovaraju\' coj dimenziji, \v sto je telo sa najmanje temena koje "\v zivi" u posmatranom prostoru i posmatrani put iz centra simpleksa smatramo da \' ce se ispostaviti za najkra\' ci put \v ciji je ovo konveksni omota\v c, ma koliko ljudi da ga obrazuje.
 
 
 \smallskip
@@ -221,10 +221,35 @@ $$\Rightarrow \left(\frac{-l_2-l_3-...-l_{n+1}}{n+1}\right)^2+\left(\frac{n\cdot
 $$\Rightarrow \frac{1}{(n+1)^2}\left[ (n^2+n)\cdot {\sum_{i=2}^{n+1} {l_i^2}} - (2n+2)\cdot {\sum_{i=2, i<j}^{n+1} {l_i\cdot l_j} } \right]=1$$
 $$\Rightarrow n\cdot {\sum_{i=2}^{n+1} {l_i^2}} - 2\cdot {\sum_{\substack{ i=2\\ i<j}}^{n+1} {l_i\cdot l_j} } =n+1$$
 \\
-\indent Problem koji poku\v avamo da re\v simo je da na\dj emo najve\' cu udaljenost na koju mo\v zemo da postavimo drugi $(n-1)$-dimenzioni potprostor paralelan posmatranom, tako da on sigurno se\v ce posmatrani simpleks. Primetimo da je tra\v zena udaljenost ta\v cno minimum po svim posmatranim $(n-1)$-dimenzionim potprostorima od $max\{l_2, l_3,..., l_{n+1}\}$.
+
+
+
+
+
+\indent Problem je ovime sveden na na\v zenje najve\' ce udaljenosi na koju mo\v zemo da postavimo drugi $(n-1)$-dimenzioni potprostor paralelan posmatranom, tako da on sigurno se\v ce posmatrani simpleks. Primetimo da je tra\v zena udaljenost ta\v cno minimum po svim posmatranim $(n-1)$-dimenzionim potprostorima od $max\{l_2, l_3,..., l_{n+1}\}$.
 \\
 \\
-\indent U ovom izrazu figuri\v su samo $l_2, l_3,..., l_{n+1}$, te iz njega \v zelimo da pronadjemo ovu vrednost. Potrebno nam je bilo koje ograni\v cenje za ovu vrednost, ali smatramo da se optimalna vrednost dobija kada je polovina ovih udaljenosti 0, tj. polovina temena pripada posmatranom $(n-1)$-dimenzionom potprostoru, a druga polovina je na jednakoj udaljenosti od nje, tj. $l_2=l_3=...=l_{\lceil \frac{n}{2}\rceil+1}=l$. Time se dobija:
+\indent Ekvivalentan problem tome bi bio, za neko fiksno $t\in \mathbb{R}^+$ maksimizovati izraz:
+$$n\cdot {\sum_{i=2}^{n+1} {l_i^2}} - 2\cdot {\sum_{\substack{ i=2\\ i<j}}^{n+1} {l_i\cdot l_j} }, $$
+pri uslovu $l_2,l_3,..., l_{n+1}\in [0,t]$.
+\\
+\\
+\indent Fiksiranjem $l_2, l_3,..., l_n$ dobijamo kvadratnu funkciju po $l_{n+1}$:
+$$n\cdot l_{n+1}^2-l_{n+1}\cdot 2\sum^{n}_{i=2}l_i+\sum^{n}_{i=2}l_i^2-2\sum^{n}_{\substack{ i=2\\ i<j}}l_i\cdot l_j$$
+\indent Po\v sto je u ovoj kvadratnoj koeficijent uz $l_{n+1}^2$ pozitivan, grafik ove funkcije je konveksna parabola, te joj je na segmentu $[0,l]$ maksimalna vrednost na jednom od krajeva segmenta, tj. maksimizuje se kada je $l_{n+1}$ ili 0 ili $l$.
+\\
+\\
+\indent Analogno, svaki od $l_2, l_3,..., l_n$ tako\dj e treba biti ili 0 ili $l$. Sada treba maksimizovati ovaj izraz, pri uslovu:
+$$l_2, l_3,..., l_{n+1}\in \{0, l\}.$$
+
+\indent Posmatrana suma mo\v ze da se prezapi\v se kao:
+$$\sum^{n+1}_{\substack{i=2\\ i<j}}(x_i-x_j)^2=n+1$$
+\indent Neka od ovih du\v zina $a\in \mathbb{N}$ ima vrednost $t$, a $n-a$ ima vrednost 0. Ubacivanjem toga u prethodno, dobija se:
+$$(n-a)a\cdot l=n+1$$
+\indent Po\v sto se $l$ minimizuje kada se $(n-a)a$ maksimizuje, a $(n-a)$ i $a$ imaju konstantan zbir, prema nejednakosti izme\dj u aritmeti\v cke i geometrijske sredine, to se de\v sava kada je $n-a=a$. Ovo se mo\v ze dosti\' ci kada je $n$ parno, a kada je neparno, izraz se maksimizuje kada se $a$ i $n-a$ razlikuju za jedan. Stoga, $a= \left \lceil{\frac{n}{2}}\right \rceil$.
+\\
+\\
+\indent Time se dobija:
 $$n\cdot \left \lceil{\frac{n}{2}}\right \rceil\cdot l^2-2\cdot {{\lceil{\frac{n}{2}}\rceil}\choose {2}}\cdot l^2=n+1$$
 $$\left( n\cdot \left \lceil \frac{n}{2} \right \rceil - {\left \lceil \frac{n}{2} \right\rceil} \cdot \left( \left \lceil \frac{n}{2}\right \rceil -1 \right) \right) \cdot l^2=n+1$$
 $$\left \lceil \frac{n}{2} \right \rceil \cdot \left( n-\left \lceil \frac{n}{2}\right \rceil +1 \right)\cdot l^2=n+1$$
@@ -233,7 +258,7 @@ $$\Rightarrow l=\sqrt{\frac{n+1}{\left\lceil \frac{n}{2}\right\rceil \cdot \left
 Po\v sto je stranica ovog simpleksa du\v zine $\sqrt2$, odnos stranice simpleksa i udaljenosti dva $(n-1)$-dimenziona potprostora izme\dj u  kojih se taj simpleks ne mo\v ze postaviti izme\dj u njih je:
 $$\frac{\sqrt2}{l}=\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$$
 \\
-Stoga, izme\dj u dva paralelna $(n-1)$-dimenziona potprostora na udaljenosti $1$ ne mo\v ze da se postavi $n$-simpleks stranice  $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$.
+\indent Stoga, izme\dj u dva paralelna $(n-1)$-dimenziona potprostora na udaljenosti $1$ ne mo\v ze da se postavi $n$-simpleks stranice  $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$.
 \\
 $\square$
 \end{proof}
@@ -296,14 +321,23 @@ $$S_{n+1}(T_n)\leqslant L_{n,n+1}= \sqrt{n\cdot\left\lceil\frac{n}{2}\right\rcei
 \begin{teo} Najkra\' ca izlazna putanja iz $k$-trake u $\mathbb{R}^n$ je ista kao najkra\' ca izlazna putanja iz trake u $\mathbb{R}^{k+1}$.\end{teo}
 
 \begin{proof}
-Posmatrajmo presek nekog potprostora dimenzije $k+1$ i $k$-trake u $n$ dimenzija. Taj presek \' ce o\v cigledno pripadati projekciji posmatrane trake na ovaj potprostor.
+Posmatrajmo presek nekog potprostora dimenzije $k+1$ i $k$-trake u $n$ dimenzija. Kada bilo koji objekat projektujemo na neki drugi, njihov presek mora pripadati toj projekciji. Stoga, kada bismo projektovali $k$-traku u $n$ dimenzija na posmatrani $k+1$ podprostor, ovaj presek mora pripadati toj projekciji.
 \\
 \\
-\indent  Svaka ta\v cka $k$-trake u $\mathbb{R}^n$ se mo\v ze predstaviti kao zbir neke ta\v cke koja pripada unutra\v snjosti sfere jedini\v cnog pre\v cnika $\mathbb{S}^{n-k}$ i nekog vektora iz potprostora $\mathbb{R}^k$ linearno nezavisnog podprostoru u kom se nalazi ta sfera. To zna\v ci da \' ce projekcija $k$-trake na bilo koji potprostor dimenzije $k+1$ imati jedini\v cnu \v sirinu. Stoga izlazna putanja iz trake u  $\mathbb{R}^{k+1}$ je dovoljna za izlazak iz $k$- trake u $\mathbb{R}^n$. 
+\indent Neka je $S$ jedini\v cna sfera u $\mathbb{R}^{n-k}$ i neka je $P$ podprostor $\mathbb{R}^k$ takvi da va\v zi:
+
+$$Lin(S) \cap Lin(P)=\emptyset,$$
+gde za za skup vektora $A$ i vektorski prostor $B$, sa $Lin(A)$ ozna\v cavamo skup svih linearnih kombinacija vektora iz $A$, a sa $Lin(B)$ linearnu kombinaciju vektora baze.
+\\
+Tada je $k$-traka u $n$ dimenzija zapravo $Lin(S\cup P)$. %OBJASNI ZASTO??
 \\
 \\
-\indent Ako uzmemo potprostor dimenzije $k+1$  generisan istim $k$ potprostorom kojim je generisana traka, i proizvoljnim vektorom sa sfere, projekcija $k$-trake na njega bi\' ce ba\v s traka u potprostoru $\mathbb{R}^{k+1}$ , \v cime je dokaz kompletan.
-$\square$
+\indent Po\v sto je $S$ jedini\v cne \v sirine, a $P$ ima samo $k$ dimenzija, tj. projekcija $P$ na $\mathbb{R}^{k+1}$ po $(k+1)$-voj dimenziji je \v sirine 0, linearna kombinacija njihove unije je jedini\v cne \v sirine. Stoga, projekcija $k$-trake u $n$ dimenzija na proizvoljan $\mathbb{R}^{k+1}$ potprostor je \v sirine 1, te se ne mo\v ze pokriti trakom u $(k+1)$-noj dimenziji. Zbog toga je svaki izlazni put iz trake u $(k+1)$-noj dimenziji tako\dj e i izlazni put iz $k$-trake u $n$ dimenzija.
+\\
+\\
+\indent S druge strane, ako za proizvoljan vektor $v\in S$ defini\v semo skup:
+$$X_v=\{ \lambda v+p| p\in P, |\lambda v|\leqslant \frac{1}{2}\},$$
+tj. $X+v$ je skup dobijen tako \v sto sve vektore iz $P$ saberemo sa svim vektorima iz $S$ koji imaju isti pravac kao vektor $v$. Ovaj skup predstavlja traku u $(k+1)$-noj dimenziji, stoga va\v zi i da je izlazni put iz $k$-trake u $n$ dimenzija tako\dj  e i izlazni put iz trake u $(k+1)$-noj dimenziji. $\square$
 \end{proof}
 \\
 
@@ -316,7 +350,7 @@ Za svaki izlazni put za jednog \v coveka postoji ekvivalentan izlazni put za dvo
 $\square$
 \end{proof}
 \\
-\begin{df} Geometrijska medijana skupa ta\v caka $S=\{ X_1, X_2, ..., X_m\}$, gde su $X_i\in \mathbb{R}^n$ je ta\v cka $M\in \mathbb{R}^n$ za kogu va\v zi:
+\begin{df} Geometrijska medijana skupa ta\v caka $S=\{ X_1, X_2, ..., X_m\}$, gde su $X_i\in \mathbb{R}^n$ je ta\v cka $M\in \mathbb{R}^n$ za koju va\v zi:
 $$\underset{M\in \mathbb{R}^n}{\arg\min} \sum^m_{i=1}{d(X_i, M)}, $$
 gde je za $A,B\in \mathbb{R}^n$ $d(A, B)$ Euklidska razdaljina izme\dj u ta\v caka $A$ i $B.$\end{df}
 \begin{df} Tori\v celijeva ta\v cka je geometrijska medijana trougla. \end{df}
@@ -335,10 +369,10 @@ $$\angle AXB=\angle BXC= \angle CXA=120^\circ$$
 Neka je konveksni omota\v c puta $\bigtriangleup ABC$ i neka je po\v cetna ta\v cka puta ta\v cka $X$ (unutar $\bigtriangleup ABC$). Da bi ovo bio konveksni omota\v c posmatranog puta, neki od ljudi koji kre\' cu iz $X$ svakako moraju da u nekom trenutku pro\dj u i kroz ta\v cku $A$, $B$ i $C$. Kada bi iz ta\v cke $X$ kretalo vi\v se od 3 osobe, svakako neka tri \v coveka (ili manje) od njih moraju da pro\dj u kroz ova tri temena trougla, a ostali nikako ne doprinose obliku konveksnog omota\v ca, te su bespotrebni, tj. kada svi ljudi osim te trojice koji prolaze kroz temena ne bi krenuli, put bi bio kra\' ci. Stoga, optimalno je da krene najvi\v se tri osobe. 
 \\
 \\
-\indent Ako za $\bigtriangleup ABC$ va\v zi da su mu svi uglovi ne ve\' ci od $120^\circ$, poznato je da je geometrijska medijana temena ovog trougla njegova Tori\v celijeva ta\v cka. Put koji obrazuje troje ljudi koji kre\' cu iz Tori\v celijeve ta\v cke i svaki ide do jednog temena je kra\' ci od bilo kog puta za jednog \v coveka, jer bi taj put morao da pro\dj e kroz sva temena, tj. najkra\' ci put za jednog \v coveka bi bio polaze\' ci od jednog temena uz dve najkra\' ce stranice, \v sto je du\v ze od puta iz Tori\v celijeve ta\v cke (ina\v ce bi geometrijska medijana bila teme u kom se spajaju dve najkra\' ce stranice, \v sto ne va\v zi).
+\indent Ako za $\bigtriangleup ABC$ va\v zi da su mu svi uglovi ne ve\' ci od $120^\circ$, Tori\v celijeva ta\v cka je unutar trougla i ,,gleda" sve stranice trougla pod uglom od $120^\circ$. Put koji obrazuje troje ljudi koji kre\' cu iz Tori\v celijeve ta\v cke i svaki ide do jednog temena je kra\' ci od bilo kog puta za jednog \v coveka, jer bi taj put morao da pro\dj e kroz sva temena, tj. najkra\' ci put za jednog \v coveka bi bio polaze\' ci od jednog temena uz dve najkra\' ce stranice, \v sto je du\v ze od puta iz Tori\v celijeve ta\v cke (po definiciji geometrijske medijane).
 \\
 \\
-\indent Stoga, $X$ je Tori\v celijeva ta\v cka $\bigtriangleup ABC$. Neka su $h_a, h_b, h_c$ redom visine iz temena $A, B, C$ i neka je $x=|AX|, y=|BX|, z=|CX|$. Da bi put sa ovim konveksnim omota\v cem bio izlazan iz $T_2$, mora va\v ziti $min\{h_a,h_b,h_c\}\geqslant 1$, s tim da se tra\v zi minimalna suma $x+y+z$ pri kojoj to va\v zi.
+\indent Stoga, neka je $X$ Tori\v celijeva ta\v cka $\bigtriangleup ABC$. Neka su $h_a, h_b, h_c$ redom visine iz temena $A, B, C$ i neka je $x=|AX|, y=|BX|, z=|CX|$. Da bi put sa ovim konveksnim omota\v cem bio izlazan iz $T_2$, mora va\v ziti $min\{h_a,h_b,h_c\}\geqslant 1$, s tim da se tra\v zi minimalna suma $x+y+z$ pri kojoj to va\v zi.
 \\
 \\
 \indent Problem minimizacije $x+y+z$ pri uslovu $min\{h_a,h_b,h_c\}\geqslant 1$ je ekvivalentan problemu maksimizacije $min\{h_a,h_b,h_c\}$ ako fiksiramo $x+y+z=c$, za bilo koju pozitivnu konstantu $c$.
@@ -370,7 +404,7 @@ $$1=\frac{\sqrt3}{2}\sqrt{xy+yz+zx}=\frac{1}{2}\cdot c,$$
 tj. $c=2$. Ovo je slu\v caj gde je $\bigtriangleup ABC$ jednakostrani\v can i $X$ je njegov centar.
 \\
 \\
-\indent Ako je neki od uglova $\bigtriangleup ABC$ ve\' ci od $120^\circ$, poznato je da je geometrijska medijana njegovih temena ono teme u kom se spajaju dve najkra\' ce stranice. Neka bez umanjenja op\v steg va\v zi $\angle BAC>120^\circ$.
+\indent Ako je neki od uglova $\bigtriangleup ABC$ ve\' ci od $120^\circ$, Tori\v celijeva ta\v cka je ono teme u kom se spajaju dve najkra\' ce stranice. Neka bez umanjenja op\v steg va\v zi $\angle BAC>120^\circ$.
 \\
 \\
 \indent Ponovo je uslov da ovaj put bude izlazan iz $T_2$ da su sve visine ovog trougla du\v zine barem 1, tj. da je $h_a\geqslant 1$ i va\v zi:
