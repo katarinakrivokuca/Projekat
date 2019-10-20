@@ -145,15 +145,21 @@ $$S(F)=\lim_{n \to \infty} S_n(F)$$
 \indent Ovaj limes je definisan jer je niz $S_n(F)$ nerastu\' ci, jer u izlaznom putu za $k+1$ ljudi, jedan \v covek mo\v ze da stoji i stoga $S_{k+1}(F)\leqslant S_{k}(F)$. Ovaj niz je tako\dj e ograni\v cen odozdo nulom jer ozna\v cava sumu nekih du\v zina, te ovaj limes mora da postoji. 
 \\
 \subsection[Cilj rada]{Cilj rada}
+\bigskip
 U ovom radu posmatramo uop\v stenje Belmanovog problema u $\mathbb{R}^n$, u originalnu, kao i pri modifikaciji za vi\v se ljudi navedenoj u prethodnom odeljku.
+\\
 \\
 \indent U odeljku 2.1 je pokazano koja je najmanja du\v zina stranice pravilnog simpleksa u $\mathbb{R}^n$ koji se ne mo\v ze smestiti izme\dj u dve hiperravni na jedini\v cnoj udaljenosti. Zatim su u odeljcima 2.2 i 2.3  uo\v cene "\v setnje" po tom simpleksu koje su izlazne putanje iz \v sume ograni\v cene sa dve paralelne hiperravni na jedini\v cnoj udaljenosti u $\mathbb{R}^n$ redom za jednog i $(n+1)$-nog \v coveka, \v cime su data dva gornja ograni\v cenja za du\v zinu izlaznog puta iz ovih \v suma- prvo va\v zi za uop\v stenje originalnog problema, a drugo (koje je ja\v ce od prvog) va\v zi za modifikaciju problema. 
 \\
+\\
 \indent Nadalje se sve posmatra pri modifikovanoj verziji problema.
 \\
-\indent Tre\' ce poglavlje se bavi donjim ograni\v cenjem za du\v zinu najkra\' ceg izlaznog puta iz \v suma posmatranih u poglavlju 2,. U odaljku 3.1 je pokazano ograni\v cenje koje va\v zi nezavisno od toga koliko ljudi poku\v sava da pobegne iz \v sume, dok je u odeljku 3.2 pokazano ograni\v cenje u funkciji od broja ljudi koji poku\v savaju da pobegnu. Kako se broj ljudi pove\' cava, tako se donje ograni\v cenje smanjuje.
+\\
+\indent Tre\' ce poglavlje se bavi donjim ograni\v cenjem za du\v zinu najkra\' ceg izlaznog puta iz \v suma posmatranih u poglavlju 2, u zavisnosti od toga koliko ljudi pou\v sava da iza\dj e iz \v sume.
+\\
 \\
 \indent U \v cetvrtom poglavlju su posmatrane \v sume koje su uo\v cene kao drugi na\v cin da se u $\mathbb{R}^n$ uop\v sti planarna \v suma ograni\v cena sa dve paralelne prave na jedini\v cnoj udaljenosti. Pokazano je da je problem izlaska iz svake od tih \v suma ekvivalentan problemu izlaska iz \v sume ograni\v cene sa dve paralelne hiperravni na jedini\v cnoj udaljenosti u prostoru neke druge (jedinstveno odre\dj ene) dimenzije.
+\\
 \\
 \indent U petom poglavlju je posmatran problem izlaska iz planarne \v sume ograni\v cene sa dve paralelne prave na jedini\v cnoj udaljenosti. Pokazano je da je, pri restrikciji konveksnog omota\v ca puta na trougao, najkra\' ci put sa ma koliko ljudi ba\v s konstruisani put sa tri osobe du\v zine 2.
 \\
@@ -227,7 +233,9 @@ Predstavimo $x_1, x_2,..., x_{n+1}$ u funkciji od $l_2, l_3,..., l_{n+1}$:
 $$x_1=-\frac{l_2+l_3+...+l_{n+1}}{n+1}$$
 $$x_2=\frac{n\cdot l_2-l_3-l_4-...-l_{n+1}}{n+1}$$
 $$x_3=\frac{-l_2+n\cdot l_3-l_4-...-l_{n+1}}{n+1}$$
+\vspace{3pt}
 $$...$$
+\vspace{3pt}
 $$x_{n+1}=\frac{-l_2-l_3-l_4-...+n\cdot l_{n+1}}{n+1}$$
 \\
 \indent Po\v sto za vektor $\vv{x}$ znamo da je jedini\v can, va\v zi:
@@ -329,6 +337,40 @@ $$S_{n+1}(T_n)\leqslant L_{n,n+1}= \sqrt{n\cdot\left\lceil\frac{n}{2}\right\rcei
 \section{Donje ograni\v cenje u $n$ dimenzija}
 
 Gomi je pokazao gornje organi\v cenje za du\v zinu puta \v sirine 1. Konstrui\v simo put za jednog \v coveka koji koriste\' ci Gomijevo ograni\v cenje, daje donje ograni\v cenje za du\v zinu modifikovanog puta.
+
+\begin{teo}
+Neka je du\v zina najkra\' ceg izlaznog puta jedini\v cne \v sirine za $k\geqslant 2$ ljudi iz trake u $n\geqslant 2$ dimenzija $S_k$. Tada va\v zi:
+$$S_k\geqslant\frac{k}{2k-2}\cdot \sqrt{2.2782^2+9(n-2)}$$
+\end{teo}
+
+\begin{proof}
+Neka su $\gamma_1, \gamma_2,..., \gamma_k$ putevi ovih $k$ ljudi, za svako $1\leqslant i\leqslant k$ definisani sa:
+$$\gamma_i: [0,1]\to \mathbb{R}^n$$
+
+I neka su $l_1, l_2,...,l_k$ redom du\v zine $\gamma_1, \gamma_2,..., \gamma_k$, pri uslovu da su $l_1, l_k\leqslant \min(l_2,l_3,...l_{k-1})$
+ Posmatrajmo funkciju $\gamma$ definisanu sa:
+$$\gamma: [0, 2k-2]\to \mathbb{R}^n$$
+
+\[ \gamma(x) = \begin{cases}  
+          \gamma_1(1-x) & 0\leqslant x\leqslant 1 \\
+          \gamma_i(x-(2i-3)) & 2i-3< x \leqslant2i-2, i\in\{2,3,...,k-1\}\\
+	 \gamma_i (1-(x-(2i-2)))& 2i-2< x\leqslant 2i-1, i \in\{2,3,...,k-1\}\\
+          \gamma_k(x-(2k-3)) & 2k-3<x \leqslant 2k-2
+       \end{cases}
+ \]
+\\
+\\
+\indent Po definiciji puta za $k$ ljudi, put svakog \v coveka je neprekidna funkcija i va\v zi $\gamma_1(0)=\gamma_2(0)=...=\gamma_k(0)$, te za svako $i\in \{2,3,...,k\}$ va\v zi:
+$$\lim_{x\to (2i-3)^-}\gamma(x)=\gamma(2i-3)$$
+$$\lim_{x\to (2i-2)^-}\gamma(x)=\gamma(2i-2)$$
+\\
+\indent Stoga,  $\gamma$ je neprekidna funkcija, te mo\v zemo na nju primeniti Teoremu 2.1. Primetimo da je du\v zina $\gamma$ zapravo $l_1+2\cdot(l_2+l_3+...+l_{k-1})+l_k$, te va\v zi:
+$$l_1+2\cdot(l_2+l_3+...+l_{k-1})+l_k\geqslant\sqrt{2.2782^2+9(n-2)}$$
+\indent Po\v sto je du\v zina posmatranog puta za $k$ ljudi $l_1+l_2+...+l_k$, a po\v sto su $l_1$ i $l_k$ najkra\' ce od ovih du\v zina, tada va\v zi:
+$$l_1+l_2+...+l_k\geqslant \frac{k}{2k-2}\cdot (l_1+2\cdot(l_2+l_3+...l_{k-1})+l_k)$$
+$$\Longrightarrow S_k\geqslant \frac{k}{2k-2}\cdot \sqrt{2.2782^2+9(n-2)}$$
+$\square$
+\end{proof}
 
 
 \section[$k$-traka u $n$ dimenzija]{$k$-traka u $n$ dimenzija}
