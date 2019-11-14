@@ -1,0 +1,148 @@
+\documentclass[b1paper,portrait]{template/baposter}
+
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{relsize} % Used for making text smaller in some places
+\usepackage{amsmath,amsfonts,amssymb,amsthm} % Math packages
+\usepackage{eqparbox}
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage{graphicx,wrapfig,lipsum}
+\usepackage{wrapfig}
+\graphicspath{{graphics/}} % Directory in which figures are stored
+
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemma}{Lema}
+\newtheorem*{definition}{Definicija}
+
+ \definecolor{bordercol}{RGB}{40,40,40} % Border color of content boxes
+ \definecolor{headercol1}{RGB}{20,112,1} % Background color for the header in the content boxes (left side)
+ \definecolor{headercol2}{RGB}{20,112,1} % Background color for the header in the content boxes (right side)
+ \definecolor{headerfontcol}{RGB}{255,255,255} % Text color for the header text in the content boxes
+ \definecolor{boxcolor}{RGB}{240 240 255} % Background color for the content in the content boxes
+
+\topmargin -3cm
+\renewcommand{\baselinestretch}{0.7}
+
+\begin{document}
+
+\background
+{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (current page.north west)+(-2em,2em) node[anchor=north west]
+		{\includegraphics{Suma}};
+	\end{tikzpicture}
+}
+
+\begin{poster}
+{
+	grid=false,
+	borderColor=bordercol, % Border color of content boxes
+	headerColorOne=headercol1, % Background color for the header in the content boxes (left side)
+	headerColorTwo=headercol2, % Background color for the header in the content boxes (right side)
+	headerFontColor=headerfontcol, % Text color for the header text in the content boxes
+	boxColorOne=boxcolor, % Background color for the content in the content boxes
+	headershape=roundedright, % Specify the rounded corner in the content box headers
+	headerfont=\Large\sf\bf, % Font modifiers for the text in the content box headers
+	textborder=rectangle,
+	background=user,
+	headerborder=open, % Change to closed for a line under the content box headers
+	boxshade=plain,
+	columns=6
+} {\includegraphics[scale=0.15]{PetLogo}}
+%
+%
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+%
+{\small \color{white} 
+	\textbf{XVI konferencija polaznika Istra\v ziva\v cke stanice Petnica "Korak u nauku" \\
+	\bf  \huge Problem izlaska iz \v sume}
+}
+{\color{white} 
+	\textbf{\smaller Katarina Krivoku\' ca,  katarinakrivokuca@outlook.com, MATF Beograd\\
+		   Dimitrije Gluk\v cevi\' c, dimchee90@gmail.com, {Gimnazija "Svetozar Markovi\' c", Ni\v s}   \\
+		   mentor: Bojan Ba\v si\' c, PMF Novi Sad}
+}
+{\includegraphics[scale=0.25]{MatLogo}}
+
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+\headerbox{Problem}{name=uvod,column=0,row=0, span=3}
+{ 
+	\textbf{Definicija:}
+ 	Izgubili ste se sa prijateljima u n-dimenzionoj \v sumi.
+ 	Sve \v sto znate su oblik i dimenzije \v sume.
+ 	Kako najbr\v ze neko od vas mo\v ze da iza\dj e po pomo\' c?
+ 	\\
+ 	\\
+ 	\textbf{Koje \v sume mi posmatramo?}
+ 	\begin{itemize}
+ 		\item traka, (slika zalgallera...)
+ 		\item k-traka
+ 	\end{itemize}
+   	\vspace{0.15cm}
+}
+
+
+\headerbox{Rezultati - trake u $\mathbb{R}^n$}{name=Rez1, column=0, row=0, span=3, below=uvod}
+{
+	\begin{itemize}
+ 		\item Ho\' cemo da na\dj emo neki, \v sto "manji" objekat koji ne mo\v zemo da smestimo u traku u $\mathbb{R}^n$
+ 		\item Teorema za veli\v cinu simpleksa, mo\v zda slika tetraedra izme\dj u ravni
+ 		\item Ho\' cemo da na\dj emo neku \v sto kra\v cu \v setnju po ovom objektu
+ 		\item Gornje ograni\v cenje za 1 \v coveka, slika tog puta na tetraedru
+ 		\item za n+1 ljudi slika tetraedar
+ 	\end{itemize}
+ 	%\begin{wrapfigure}{r}{3.5cm}\vspace*{-0.5cm}
+	%\includegraphics[scale=0.1]{slika}
+	%\end{wrapfigure}
+	 \vspace{0.15cm}
+}
+
+
+\headerbox{Za\v sto je bolje i\' ci sa prijateljima?}{name=Rez2, column=3, row=0, span=3}
+{
+	\begin{itemize}
+		\item Ovde ka\v zemo da je vi\v se ljudi na\v se uop\v stenje
+		\item Def puta za k ljudi
+		\item Sli\v cica Zalgallera i Y da ka\v zemo da je na\v se bolje
+	\end{itemize}
+	\vspace{0.15cm}
+}
+
+
+\headerbox{Rezultati - k-trake}{name=Rez3, column=3, row=0, span=3, below=Rez2}
+{
+	\begin{itemize}
+		\item Ho\' cemo druga\v cije da uop\v stimo trake u vi\v sim dimenzijama
+		\item Def k-trake, slika valjka u 3d
+		\item Teorema za k-trake
+	\end{itemize}
+	\vspace{0.15cm}
+}
+
+
+\headerbox{Rezultati - donje ograni\v cenje}{name=Rez4, column=3, row=0, span=3, below=Rez3}
+{
+	\begin{itemize}
+		\item Donje ograni\v cenje u $\mathbb{R}^n$
+		\item Hipoteza da je i njihovo i na\v se donje ograni\v cenje slabo
+	\end{itemize}
+	\vspace{0.15cm}
+}
+
+\headerbox{Dalji rad}{name=Dalje, column=3, row=0, span=3, below=Rez4}
+{
+	\begin{itemize}
+		\item Na\v se putanje za jednog \v coveka mogu da se pobolj\v saju
+		\item Hipoteza $$\lim_{n \to \infty}S_n = ...$$
+	\end{itemize}
+	\vspace{0.15cm}
+}
+
+\end{poster}
+
+\end{document}
