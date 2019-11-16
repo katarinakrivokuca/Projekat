@@ -1,0 +1,189 @@
+\documentclass[b1paper,portrait]{template/baposter}
+
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{relsize} % Used for making text smaller in some places
+\usepackage{amsmath,amsfonts,amssymb,amsthm} % Math packages
+\usepackage{eqparbox}
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage{graphicx,wrapfig,lipsum}
+\usepackage{wrapfig}
+\graphicspath{{graphics/}} % Directory in which figures are stored
+
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemma}{Lema}
+\newtheorem*{definition}{Definicija}
+\newtheorem*{hipoteza}{Hipoteza}
+
+ \definecolor{bordercol}{RGB}{40,40,40} % Border color of content boxes
+ \definecolor{headercol1}{RGB}{20,112,1} % Background color for the header in the content boxes (left side)
+ \definecolor{headercol2}{RGB}{20,112,1} % Background color for the header in the content boxes (right side)
+ \definecolor{headerfontcol}{RGB}{255,255,255} % Text color for the header text in the content boxes
+ \definecolor{boxcolor}{RGB}{240 240 255} % Background color for the content in the content boxes
+
+\topmargin -2.7cm
+\renewcommand{\baselinestretch}{0.7}
+
+\begin{document}
+
+\background
+{
+	\begin{tikzpicture}[remember picture,overlay]
+		\draw (current page.north west)+(-2em,2em) node[anchor=north west]
+		{\includegraphics{Suma}};
+	\end{tikzpicture}
+}
+
+\begin{poster}
+{
+	grid=false,
+	borderColor=bordercol, % Border color of content boxes
+	headerColorOne=headercol1, % Background color for the header in the content boxes (left side)
+	headerColorTwo=headercol2, % Background color for the header in the content boxes (right side)
+	headerFontColor=headerfontcol, % Text color for the header text in the content boxes
+	boxColorOne=boxcolor, % Background color for the content in the content boxes
+	headershape=roundedright, % Specify the rounded corner in the content box headers
+	headerfont=\Large\sf\bf, % Font modifiers for the text in the content box headers
+	textborder=rectangle,
+	background=user,
+	headerborder=open, % Change to closed for a line under the content box headers
+	boxshade=plain,
+	columns=6
+} {\includegraphics[scale=0.15]{PetLogo}}
+%
+%
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+%
+{\small \color{white} 
+	\textbf{XIX konferencija polaznika Istra\v ziva\v cke stanice Petnica "Korak u nauku" \\
+	\bf  \huge Problem izlaska iz \v sume}
+}
+{\color{white} 
+	\textbf{
+			\smaller Katarina Krivoku\' ca,  katarinakrivokuca@outlook.com, MATF Beograd\\
+		   	Dimitrije Gluk\v cevi\' c, dimchee90@gmail.com, {Gimnazija "Svetozar Markovi\' c", Ni\v s}   \\
+		   	mentor: Bojan Ba\v si\' c, PMF Novi Sad
+		}
+}
+{\includegraphics[scale=0.25]{MatLogo}}
+
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+\headerbox{Problem}{name=uvod,column=0,row=0, span=3}
+{ 
+	\textbf{Postavka problema:}
+ 	Izgubili ste se sa prijateljima u $n$-dimenzionoj \v sumi.
+ 	Sve \v sto znate su oblik i dimenzije \v sume.
+ 	Kako najbr\v ze neko od vas mo\v ze da iza\dj e po pomo\' c?
+ 	\\
+ 	\\
+ 	\textbf{Koje \v sume mi posmatramo?}
+ 	\begin{itemize}
+ 		\item traka
+ 		\item $k$-traka
+ 		\item \v sume \v ciji je konveksni omota\v c trougao
+ 	\end{itemize}
+ 	{
+ 		%\begin{center}
+		%{\includegraphics[scale=0.03]{Zalgaller}};
+		%\end{center}
+	}
+   	\vspace{0.15cm}
+}
+\headerbox{Za\v sto je bolje i\' ci sa prijateljima?}{name=Rez2, column=0, row=0, span=3,below=uvod}
+{
+	Bavili smo se i na\v sim uop\v stenjem problema:
+	\begin{itemize}
+		\item Put za n ljudi je skup od $k$ puteva koji kre\' cu iz iste ta\v cke.
+		\item Du\v zina puta za $n$ ljudi je suma du\v zina pojedina\v cnih puteva.
+		\item Za put $P_k$ za $k$ ljudi ka\v zemo da je izlazan put iz \v sume $F$ ako za bilo koji po\v cetni polo\v zaj, barem jedan od n puteva iz skupa izlazi iz $F$.
+	\end{itemize}
+	%Sli\v cica Zalgallera i Y da ka\v zemo da je na\v se bolje
+	\vspace{0.15cm}
+}
+
+
+
+\headerbox{Rezultati - trake u $\mathbb{R}^n$}{name=Rez1, column=3, row=0, span=3}
+{
+ 	Ideja je bila  prona\' ci neki, \v sto ,,manji" objekat koji ne mo\v zemo da smestimo u traku u $\mathbb{R}^n$
+ 	\begin{theorem}
+ 		Izme\dj u dve hiperravni u $\mathbb{R}^n$ na udaljenosti 1 se ne mo\v ze postaviti pravilan $n$-simpleks stranice
+ 		$$\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$$
+ 		tako da ga ni jedna od ove dve hiperravni ne se\v ce. 
+		%slika tetraedra izme\dj u ravni
+ 	\end{theorem}
+ 	Dalje smo tra\v zili \v sto kra\v cu \' setnju po ovom objektu
+
+ 	\begin{theorem} Put koji formiraju po trojkama nekoplanarne ivice $n$-simpleksa \v cije su ivice du\v zine 
+ 		$\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$
+ 		je izlazni put iz trake u n dimenzija i taj put ima du\v zinu:
+		$$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}.$$
+		%slika tog puta na tetraedru
+	\end{theorem}
+	\begin{theorem}
+ 		Put koji formira $n+1$ du\v zi od centra do svih temena pravilnog $n$-simpleksa  \v cije su ivice du\v zine
+ 		$\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$
+ 		je izlazni put za $n+1$ ljudi iz trake u $n$ dimenzija i taj put ima du\v zinu:
+		$$L_{n,n+1}=\sqrt{n\cdot\left\lceil\frac{n}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}$$.
+ 		%slika tetraedar
+ 	\end{theorem}
+ 	%\begin{wrapfigure}{r}{3.5cm}\vspace*{-0.5cm}
+	%\includegraphics[scale=0.1]{slika}
+	%\end{wrapfigure}
+	 \vspace{0.15cm}
+}
+
+
+
+\headerbox{Rezultati - k-trake}{name=Rez3, column=0, row=0, span=3, below=Rez2}
+{
+	\v Sta ako druga\v cije uop\v stimo trake u vi\v sim dimenzijama? \\ \\
+	\begin{definition}
+		Defini\v simo \textbf{k-traku u n dimenzija} za svako prirodno $n$ i za svako $1\leqslant k\leqslant n-1$  kao \v sumu odredjenu
+		svim ta\v ckama iz $\mathbb{R}^n$ na udaljenosti manjoj ili jednakoj $\frac{1}{2}$ od nekog $k$-dimenzionog potprostora $\mathbb{R}^n$. 
+	\end{definition}
+	\begin{theorem}
+		Najkra\' ca izlazna putanja iz $k$-trake u $\mathbb{R}^n$ je ista kao najkra\' ca izlazna putanja iz trake u $\mathbb{R}^{k+1}$.
+	\end{theorem}
+	 %slika valjka u 3d
+	\vspace{0.15cm}
+}
+
+
+\headerbox{Rezultati - donje ograni\v cenje}{name=Rez4, column=0, row=0, span=3, below=Rez3}
+{
+	Gomi je pokazao gornje organi\v cenje za du\v zinu puta \v sirine 1.
+	On nas je inspirisao da uradimo sli\v cno za na\v se uop\v stenje sa n ljudi.
+	\begin{theorem}
+		Neka je du\v zina najkra\' ceg izlaznog puta jedini\v cne \v sirine za $k\geqslant 2$ ljudi iz trake u $n\geqslant 2$ dimenzija $S_k$. Tada va\v zi:
+		$$S_k\geqslant\frac{k}{2k-2}\cdot \sqrt{2.2782^2+9(n-2)}$$
+	\end{theorem}
+	\begin{hipoteza}
+		Kako na\v se konstrukcijski dobijena re\v senja imaju ceo "red veli\v cine" ve\' cu du\v zinu nego 
+		data donja ograni\v cenja pretpostavljamo da je mogu\' ce poo\v striti ove ocene. 
+	\end{hipoteza}
+	\vspace{0.15cm}
+}
+
+\headerbox{Dalji rad}{name=Dalje, column=3, row=0, span=3, below=Rez1}
+{
+	Posmatranjem objekata poput zarubljenih simpleksa, mogu\' ce je jo\v s pobolj\v sati predstavljene rezultate. Recimo za 3 dimenzije.\\ \\
+	%slika zarubljenog tetraedra i puta po njemu
+	Tako\dj e prirodno je postaviti i slede\' ce pitanje:
+	"Grupa ljudi je zajedno izgubljena u \v sumi poznatih dimenzija. Koliko optimalno treba da ih bude,
+	i koliki put moraju da pre\dj u, tako da znaju da \' ce iza\' ci iz \v sume?"
+	\begin{hipoteza}
+		Ako je za n-to dimenzionu \v sumu $F$ du\v zina najkra\' ceg izlaznog puta za $k$ ljudi $S_k(F)$, tada je:
+		$$S(F)=\lim_{n \to \infty} S_n(F) = L_{n,n+1}$$
+	\end{hipoteza}
+	\vspace{0.15cm}
+}
+
+\end{poster}
+
+\end{document}
