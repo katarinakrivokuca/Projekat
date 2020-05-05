@@ -342,7 +342,7 @@ $$S_k\geqslant\frac{k}{2k-2}\cdot \sqrt{2.2782^2+9(n-2)}$$
 Neka su $\gamma_1, \gamma_2,..., \gamma_k$ putevi ovih $k$ ljudi, za svako $1\leqslant i\leqslant k$ gde va\v zi:
 $$\gamma_i: [0,1]\to \mathbb{R}^n$$
 \indent Cilj je da napravimo funkciju koja \' ce na neki na\v cin imitirati put za vi\v se ljudi i to radimo tako \v sto za dati put za $k$ ljudi, funkcija ,,ide" kao da kre\' ce iz krajnje ta\v cke za prvog \v coveka, zatim ,,ide" do po\v cetne ta\v cke. Zatim ,,ide" do krajnje ta\v cke drugog, pa nazad do po\v cetne, analogno i za sve do $(k-1)$-vog \v coveka.  Nakon ovoga se funkcija opet ,,nalazi" u po\v cetnoj ta\v cki i iz nje ,,ide" do krajnje ta\v cke puta za $k$-tog \v coveka.
-Neka su $l_1, l_2,...,l_k$ redom du\v zine $\gamma_1, \gamma_2,..., \gamma_k$, pri uslovu da su $l_1, l_k\leqslant \min(l_2,l_3,...l_{k-1}).$
+Neka su $l_1, l_2,...,l_k$ redom du\v zine $\gamma_1, \gamma_2,..., \gamma_k$, pri uslovu da su $l_1, l_k\geqslant \max{(l_2,l_3,...l_{k-1})}.$
 
  Posmatrajmo funkciju $\gamma$ definisanu sa:
 $$\gamma: [0, 2k-2]\to \mathbb{R}^n$$
@@ -362,7 +362,7 @@ $$\lim_{x\to (2i-2)^-}\gamma(x)=\gamma(2i-2)$$
 \\
 \indent Stoga,  $\gamma$ je neprekidna funkcija, te mo\v zemo na nju primeniti Teoremu 2.1. Primetimo da je du\v zina $\gamma$ zapravo $l_1+2\cdot(l_2+l_3+...+l_{k-1})+l_k$, te va\v zi:
 $$l_1+2\cdot(l_2+l_3+...+l_{k-1})+l_k\geqslant\sqrt{2.2782^2+9(n-2)}$$
-\indent Po\v sto je du\v zina posmatranog puta za $k$ ljudi $l_1+l_2+...+l_k$ i po\v sto su $l_1$ i $l_k$ najkra\' ce od ovih du\v zina, tada va\v zi:
+\indent Po\v sto je du\v zina posmatranog puta za $k$ ljudi $l_1+l_2+...+l_k$ i po\v sto su $l_1$ i $l_k$ najdu\v ze od ovih du\v zina, tada va\v zi:
 $$l_1+l_2+...+l_k\geqslant \frac{k}{2k-2}\cdot (l_1+2\cdot(l_2+l_3+...l_{k-1})+l_k)$$
 $$\Longrightarrow S_k\geqslant \frac{k}{2k-2}\cdot \sqrt{2.2782^2+9(n-2)}$$\qed
 \end{proof}
@@ -462,10 +462,9 @@ tj. $c=2$. Ovo je slu\v caj gde je $\bigtriangleup ABC$ jednakostrani\v can i $X
 \\
 \\
 \indent Ponovo je uslov da ovaj put bude izlazan iz $T_2$ da su sve visine ovog trougla du\v zine barem 1, tj. da je $h_a\geqslant 1$ i va\v zi:
-$$P(\bigtriangleup ABC)=\frac{1}{2} h_a \cdot BC=\frac{1}{2} \cdot AB\cdot CA \cdot \sin(\angle BAC)$$
-$$\Longrightarrow h_a=\frac{ AB\cdot CA \cdot \sin(\angle BAC)}{BC}=\sin{(\angle CBA)}\cdot AB\geqslant 1$$
+$$h_a=\sin{(\angle BCA)}\cdot AC\geqslant 1$$
 \\
-\indent Po\v sto je $\angle BAC>120^\circ$, tada je $\angle CBA<30^\circ$, tj. $\sin(\angle CBA)<\frac{1}{2}$, mora va\v ziti $AB>2$, te mora va\v ziti i $AB+CA>2$, te ovaj slu\v caj ne mo\v ze biti bolji od prethodnog, \v cime je dokaz kompletan.\qed
+\indent Po\v sto je $\angle BAC>120^\circ$, tada je $\angle BCA<30^\circ$, tj. $\sin(\angle BCA)<\frac{1}{2}$, mora va\v ziti $CA>2$, te mora va\v ziti i $CA+AB>2$, te ovaj slu\v caj ne mo\v ze biti bolji od prethodnog, \v cime je dokaz kompletan.\qed
 \\
 \section[Zaklju\v cak]{Zaklju\v cak}
 \bigskip
