@@ -194,7 +194,7 @@ Zalgaler \cite{Zalgaller3d} je konstruisao put u $\mathbb{R}^3$ jedini\v cne \v 
 \indent Slede\' ce tvr\dj enje daje minimalnu du\v zinu stranice pravilnog $n$-simpleksa koji se ne mo\v ze postaviti unutar trake u $n$ dimenzija. Iz njega sledi gornje ograni\v cenje za izlaznu putanju iz ovakve \v sume u $\mathbb{R}^n$ za jednog \v coveka, kao i gornje ograni\v cenje tog puta za $n+1$ ljudi. 
 \smallskip
 
-\begin{tvr} Izme\dj u dve hiperravni u $\mathbb{R}^n$ na udaljenosti 1 se ne mo\v ze postaviti pravilan $n$-simpleks stranice $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$ tako da ga nijedna od ove dve hiperravni ne se\v ce.
+\begin{tvr} Izme\dj u dve hiperravni u $\mathbb{R}^n$ na udaljenosti 1 se ne mo\v ze postaviti pravilan $n$-simpleks stranice $\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}$ tako da ga nijedna od ove dve hiperravni ne se\v ce.
 \end{tvr}
 
 \begin{proof}
@@ -264,22 +264,21 @@ $$n\cdot l_{n+1}^2-l_{n+1}\cdot 2\sum^{n}_{i=2}l_i+\sum^{n}_{i=2}l_i^2-2\sum^{n}
 $$l_2, l_3,..., l_{n+1}\in \{0, l\}.$$
 
 \indent Posmatrana suma mo\v ze da se prezapi\v se kao:
-$$\sum^{n+1}_{\substack{i=2\\ i<j}}(x_i-x_j)^2=n+1$$
+$$\sum^{n+1}_{i=2}{l_i}^2+\sum^{n+1}_{\substack{i=2\\ i<j}}(l_i-l_j)^2=n+1$$
 \indent Neka od ovih du\v zina $a\in \mathbb{N}$ ima vrednost $l$, a $n-a$ ima vrednost 0. Ubacivanjem toga u prethodno, dobija se:
-$$(n-a)a\cdot l=n+1$$
-\indent Po\v sto se $l$ minimizuje kada se $(n-a)a$ maksimizuje, a $(n-a)$ i $a$ imaju konstantan zbir, prema nejednakosti izme\dj u aritmeti\v cke i geometrijske sredine, to se de\v sava kada je $n-a=a$. Ovo se mo\v ze dosti\' ci kada je $n$ parno, a kada je neparno, izraz se maksimizuje kada se $a$ i $n-a$ razlikuju za jedan. Stoga, $a= \left \lceil{\frac{n}{2}}\right \rceil$.
+$$a\cdot l^2+(n-a)a\cdot l^2=n+1$$
+$$\Rightarrow l^2\cdot a(n+1-a)=n+1$$
+\indent Po\v sto se $l$ minimizuje kada se $(n+1-a)a$ maksimizuje, a $(n+1-a)$ i $a$ imaju konstantan zbir, prema nejednakosti izme\dj u aritmeti\v cke i geometrijske sredine, to se de\v sava kada je $n+1-a=a$. Ovo se mo\v ze dosti\' ci kada je $n$ neparno, a kada je parno, izraz se maksimizuje kada se $a$ i $n+1-a$ razlikuju za jedan. Stoga, $a= \left \lceil{\frac{n+1}{2}}\right \rceil$.
 \\
 \\
 \indent Time se dobija:
-$$n\cdot \left \lceil{\frac{n}{2}}\right \rceil\cdot l^2-2\cdot {{\lceil{\frac{n}{2}}\rceil}\choose {2}}\cdot l^2=n+1$$
-$$\left( n\cdot \left \lceil \frac{n}{2} \right \rceil - {\left \lceil \frac{n}{2} \right\rceil} \cdot \left( \left \lceil \frac{n}{2}\right \rceil -1 \right) \right) \cdot l^2=n+1$$
-$$\left \lceil \frac{n}{2} \right \rceil \cdot \left( n-\left \lceil \frac{n}{2}\right \rceil +1 \right)\cdot l^2=n+1$$
-$$\Rightarrow l=\sqrt{\frac{n+1}{\left\lceil \frac{n}{2}\right\rceil \cdot \left( n-\left\lceil \frac{n}{2}\right\rceil+1\right)}}$$
+$$\left \lceil \frac{n+1}{2} \right \rceil \cdot \left( n-\left \lceil \frac{n+1}{2}\right \rceil +1\right)\cdot l^2=n+1$$
+$$\Rightarrow l=\sqrt{\frac{n+1}{\left\lceil \frac{n+1}{2}\right\rceil \cdot \left( n-\left\lceil \frac{n+1}{2}\right\rceil+1\right)}}$$
 \\
 \indent Po\v sto je stranica ovog simpleksa du\v zine $\sqrt2$, odnos stranice simpleksa i udaljenosti dva $(n-1)$-dimenziona potprostora izme\dj u  kojih se taj simpleks ne mo\v ze postaviti izme\dj u njih je:
-$$\frac{\sqrt2}{l}=\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$$
+$$\frac{\sqrt2}{l}=\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}$$
 \\
-\indent Stoga, izme\dj u dva paralelna $(n-1)$-dimenziona potprostora na udaljenosti $1$ ne mo\v ze da se postavi $n$-simpleks stranice  $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$.
+\indent Stoga, izme\dj u dva paralelna $(n-1)$-dimenziona potprostora na udaljenosti $1$ ne mo\v ze da se postavi $n$-simpleks stranice  $\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}$.
 \\
 \indent Dodatno, ovaj simpleks je po konstrukciji minimalan, tj. svaki pravilan $n$-simpleks kra\' ce stranice se mo\v ze postaviti izme\dj u dva paralelna $(n-1)$-dimenziona potprostora na udaljenosti 1.\qed
 \\
@@ -287,8 +286,8 @@ $$\frac{\sqrt2}{l}=\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( 
 \\
 \subsection[Jedan \v covek]{Jedan \v covek}
 \bigskip
-\begin{teo} Put koji formiraju po trojkama nekomplanarne ivice $n$-simpleksa \v cije su ivice du\v zine $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$ je izlazni put iz trake u n dimenzija i taj put ima du\v zinu:
-$$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}.$$\end{teo}
+\begin{teo} Put koji formiraju po trojkama nekomplanarne ivice $n$-simpleksa \v cije su ivice du\v zine $\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}$ je izlazni put iz trake u n dimenzija i taj put ima du\v zinu:
+$$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}.$$\end{teo}
 \smallskip
 
 \begin{proof}
@@ -297,18 +296,18 @@ Prema tvr\dj enju Teoreme 2.1, ovaj simpleks se ne mo\v ze postaviti izme\dj u p
 \\
 \indent Posmatrani put je neprekidan i njegov konveksni omota\v c je ba\v s ovaj simpleks. Zato \v sto posmatrani simpleks izlazi iz ove \v sume, tj. jedan od ova dva $(n-1)$-dimenziona potprostora ga se\v ce, on mora da se\v ce i put \v ciji je taj simpleks konveksni omota\v c. Stoga, ova putanja je izlazna i ima du\v zinu:
 \\
-$$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}. $$ \qed
+$$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}. $$ \qed
 \end{proof}
 \\
 \\
 \indent Stoga, va\v zi slede\' ce:
-$$S_1(T_n)\leqslant L_{n, 1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}.$$
+$$S_1(T_n)\leqslant L_{n, 1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}.$$
 \\
 \subsection[$\textbf{n+1}$ \v covek]{$\textbf{n+1}$ \v covek} 
 \bigskip
-\begin{teo} Put koji formira $n+1$ du\v zi od centra do svih temena pravilnog $n$-simpleksa  \v cije su ivice du\v zine $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$ je izlazni put za $n+1$ ljudi iz trake u $n$ dimenzija i taj put ima du\v zinu:
+\begin{teo} Put koji formira $n+1$ du\v zi od centra do svih temena pravilnog $n$-simpleksa  \v cije su ivice du\v zine $\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}$ je izlazni put za $n+1$ ljudi iz trake u $n$ dimenzija i taj put ima du\v zinu:
 
-$$L_{n,n+1}=\sqrt{n\cdot\left\lceil\frac{n}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}.$$\end{teo}
+$$L_{n,n+1}=\sqrt{n\cdot\left\lceil\frac{n+1}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}.$$\end{teo}
 
 \begin{proof}
 Sli\v cno dokazu Teoreme 2.2, po\v sto svaki od $n+1$ ljudi ide od centra posmatranog simpleksa do nekog od njegovih temena, tako da do svakog temena ide ta\v cno jedan \v covek, konveksni omota\v c skupa ovih puteva je ba\v s taj simpleks. Po\v sto barem jedan od posmatranih $(n-1)$- dimenzionih potprostora se\v ce konveksni omota\v c ovog puta, barem jedan od njih mora se\' ci i taj put. 
@@ -316,18 +315,18 @@ Sli\v cno dokazu Teoreme 2.2, po\v sto svaki od $n+1$ ljudi ide od centra posmat
 \\
 \indent Odnos izme\dj u rastojanja centra simpleksa i temena sa du\v zinom ivice je:
 $$\frac{\sqrt{\left( 1-\frac{1}{n+1}\right)^2+n\cdot{\frac{1}{n+1}}^2}}{\sqrt2}=\frac{\sqrt{n^2+n}}{\sqrt2 \cdot(n+1)}$$
-\indent Onda je rastojanje izme\dj u centra i temena u simpleksu stranice  $\sqrt{\frac{2\left\lceil \frac{n}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}{n+1}}$ je:
+\indent Onda je rastojanje izme\dj u centra i temena u simpleksu stranice  $\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}$ je:
 \\
-$$L_{n,n+1}=\frac{1}{n+1}\cdot\sqrt{n\cdot\left\lceil\frac{n}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n}{2}\right\rceil+1\right)}$$
+$$L_{n,n+1}=\frac{1}{n+1}\cdot\sqrt{n\cdot\left\lceil\frac{n+1}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}$$
 \\
 \indent Po\v sto svaki od $n+1$ ljudi koji kre\' cu iz centra ovog simpleksa ima put du\v zine $S$, ukupna du\v zina puta je:
 \\
-$$L_{n,n+1}=\sqrt{n\cdot\left\lceil\frac{n}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n}{2}\right\rceil +1\right)}$$
+$$L_{n,n+1}=\sqrt{n\cdot\left\lceil\frac{n+1}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n+1}{2}\right\rceil +1\right)}$$
 \qed
 \end{proof}
 \\
 \indent Stoga, va\v zi slede\' ce:
-$$S_{n+1}(T_n)\leqslant L_{n,n+1}= \sqrt{n\cdot\left\lceil\frac{n}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n}{2}\right\rceil +1\right)}$$
+$$S_{n+1}(T_n)\leqslant L_{n,n+1}= \sqrt{n\cdot\left\lceil\frac{n+1}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n+1}{2}\right\rceil +1\right)}$$
 
 
 \section{Donje ograni\v cenje u $n$ dimenzija}
