@@ -14,8 +14,9 @@
 \usepackage{url}
 \usepackage{float}
 \usepackage{indentfirst}
-\usepackage{babel}[serbian]
+%\usepackage{babel}[serbian]
 \usepackage{esvect}
+
 
 
 \newtheorem{teo}{\bf Teorema}[section]
@@ -377,23 +378,23 @@ $$\Longrightarrow S_k\geqslant \frac{k}{2k-2}\cdot \sqrt{2.2782^2+9(n-2)}$$\qed
 \begin{teo} Najkra\' ca izlazna putanja iz $k$-trake u $\mathbb{R}^n$ je ista kao najkra\' ca izlazna putanja iz trake u $\mathbb{R}^{k+1}$.\end{teo}
 
 \begin{proof}
-Posmatrajmo presek nekog potprostora dimenzije $k+1$ i $k$-trake u $n$ dimenzija. Kada bilo koji objekat projektujemo na neki drugi, njihov presek mora pripadati toj projekciji. Stoga, kada bismo projektovali $k$-traku u $n$ dimenzija na posmatrani $k+1$ potprostor, ovaj presek mora pripadati toj projekciji.
-\\
-\\
-\indent Neka je $S$ jedini\v cna sfera u $\mathbb{R}^{n-k}$ i neka je $P$ potprostor $\mathbb{R}^k$ takvi da va\v zi:
-
-$$Lin(S) \cap Lin(P)=\emptyset,$$
-gde za za skup vektora $A$ i vektorski prostor $B$, sa $Lin(A)$ ozna\v cavamo skup svih linearnih kombinacija vektora iz $A$, a sa $Lin(B)$ linearnu kombinaciju vektora baze.
-\\
-Tada je $k$-traka u $n$ dimenzija zapravo $Lin(S\cup P)$. 
-\\
-\\
-\indent Po\v sto je $S$ jedini\v cne \v sirine, a $P$ ima samo $k$ dimenzija, tj. projekcija $P$ na $\mathbb{R}^{k+1}$ po $(k+1)$-voj dimenziji je \v sirine 0, linearna kombinacija njihove unije je jedini\v cne \v sirine. Stoga, projekcija $k$-trake u $n$ dimenzija na proizvoljan $\mathbb{R}^{k+1}$ potprostor je \v sirine 1, te se ne mo\v ze pokriti trakom u $(k+1)$-noj dimenziji. Zbog toga je svaki izlazni put iz trake u $(k+1)$-noj dimenziji tako\dj e i izlazni put iz $k$-trake u $n$ dimenzija.
-\\
-\\
-\indent S druge strane, ako za proizvoljan vektor $v\in S$ defini\v semo skup:
-$$X_v=\left \{ \lambda v+p \phantom{a} \middle | \phantom{a}  p\in P, |\lambda v|\leqslant \frac{1}{2}\right \},$$
-tj. $X+v$ je skup dobijen tako \v sto sve vektore iz $P$ saberemo sa svim vektorima iz $S$ koji imaju isti pravac kao vektor $v$. Ovaj skup predstavlja traku u $(k+1)$-noj dimenziji, stoga va\v zi i da je izlazni put iz $k$-trake u $n$ dimenzija tako\dj  e i izlazni put iz trake u $(k+1)$-noj dimenziji. $\square$
+    Posmatrajmo jedan izlazni put iz trake u $(k+1)$-noj
+    dimenziji, i pretpostavimo da je on ceo u unutra\v snjosti na\v se
+    $k$-trake u $n$-dimenzija.
+    Projektujemo dati $R^n$ prostor na $R^{k+1}$ potprostor u kom
+    le\v zi posmatrani put.
+    Prilikom ortogonalne projekcije bilo koje figure,
+    njena \v sirina (u prostoru na koji smo projektovali)
+    ne mo\v ze biti ve\' ca nego \v sirina polazne figure u
+    polaznom prostoru (zaista, ukoliko bi se projektovana
+    figura mogla smestiti izme\dj u neke dve hiperravni u svom
+    potprostoru, od njih direktno mo\v zemo, pomeranjem u pravcu
+    projekcije, napraviti hiperravni polaznog prostora
+    izme\dj u kojih je polazna figura).
+    Dakle, posmatranom projekcijom se uo\v ceni put projektuje na sebe,
+    a \v citava $k$-traka se projektuje na neki objekat \v sirine
+    ne manje od 1; stoga, posmatrani put bi se mogao smestiti
+    u neku traku \v sirine 1 u prostoru $R^{k+1}$, kontradikcija.
 \end{proof}
 \\
 
