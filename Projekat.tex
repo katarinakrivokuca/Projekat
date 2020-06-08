@@ -1,23 +1,5 @@
-\documentclass[11pt,letter]{article}
-\usepackage{amsfonts,epsf,amsmath,amssymb,graphicx,tabularx,booktabs}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{epstopdf}
-\usepackage[ruled,linesnumbered]{algorithm2e}
-\usepackage{subfig}
-\usepackage{multicol}
-\usepackage{enumerate}
-\usepackage{url}
-\usepackage{float}
-\usepackage{indentfirst}
-%\usepackage{babel}[serbian]
-\usepackage{esvect}
-
-
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm, esvect}
 
 \newtheorem{teo}{\bf Teorema}[section]
 \newtheorem{posl}[teo]{\bf Posledica}
@@ -27,18 +9,12 @@
 \newtheorem{pro}[teo]{\bf Problem}
 \newtheorem{df}[teo]{\bf Definicija}
 
-\newcommand{\comment}[1]{\ $[\![${\normalsize #1}$]\!]$ \ }
-\newcommand{\proof}{\noindent{\bf Proof.\ }}
-\newcommand{\qed}{\hfill $\square$ \bigskip}
-\def\cp{\,\square\,}
-
-
-
 \renewcommand{\tablename}{Tabela}
 \renewcommand{\figurename}{Slika}
 \renewcommand{\refname}{Literatura}
 \renewcommand{\abstractname}{Apstrakt}
-\renewcommand{\proof}{\textbf{Dokaz.}}
+\renewcommand{\proofname}{Dokaz}
+\renewcommand{\vv}{\overrightarrow}
 
 % Centering the EPS graphics inside the FIGURE environment
 \def\slika #1{\begin{center} \epsffile{#1} \end{center}}
@@ -265,7 +241,7 @@ $$n\cdot l_{n+1}^2-l_{n+1}\cdot 2\sum^{n}_{i=2}l_i+\sum^{n}_{i=2}l_i^2-2\sum^{n}
 $$l_2, l_3,..., l_{n+1}\in \{0, l\}.$$
 
 \indent Posmatrana suma mo\v ze da se prezapi\v se kao:
-$$\sum^{n+1}_{i=2}{l_i}^2+\sum^{n+1}_{\substack{i=2\\ i<j}}(l_i-l_j)^2=n+1$$
+$$\sum^{n+1}_{i=2}{l_i}^2 + \sum^{n+1}_{\substack{i=2\\ i<j}} {(l_i-l_j)}^2 = n+1$$
 \indent Neka od ovih du\v zina $a\in \mathbb{N}$ ima vrednost $l$, a $n-a$ ima vrednost 0. Ubacivanjem toga u prethodno, dobija se:
 $$a\cdot l^2+(n-a)a\cdot l^2=n+1$$
 $$\Rightarrow l^2\cdot a(n+1-a)=n+1$$
@@ -284,11 +260,14 @@ $$\frac{\sqrt2}{l}=\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left
 \indent Dodatno, ovaj simpleks je po konstrukciji minimalan, tj. svaki pravilan $n$-simpleks kra\' ce stranice se mo\v ze postaviti izme\dj u dva paralelna $(n-1)$-dimenziona potprostora na udaljenosti 1.\qed
 \\
 \end{proof}
-\\
 \subsection[Jedan \v covek]{Jedan \v covek}
 \bigskip
-\begin{teo} Put koji formiraju po trojkama nekomplanarne ivice $n$-simpleksa \v cije su ivice du\v zine $\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}$ je izlazni put iz trake u n dimenzija i taj put ima du\v zinu:
-$$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}.$$\end{teo}
+\begin{teo}
+	Put koji formiraju po trojkama nekomplanarne ivice $n$-simpleksa \v cije su ivice du\v zine
+	$\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}$
+	je izlazni put iz trake u n dimenzija i taj put ima du\v zinu:
+	$$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}.$$
+\end{teo}
 \smallskip
 
 \begin{proof}
@@ -299,8 +278,6 @@ Prema tvr\dj enju Teoreme 2.1, ovaj simpleks se ne mo\v ze postaviti izme\dj u p
 \\
 $$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}. $$ \qed
 \end{proof}
-\\
-\\
 \indent Stoga, va\v zi slede\' ce:
 $$S_1(T_n)\leqslant L_{n, 1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}.$$
 \\
@@ -325,7 +302,6 @@ $$L_{n,n+1}=\frac{1}{n+1}\cdot\sqrt{n\cdot\left\lceil\frac{n+1}{2}\right\rceil\c
 $$L_{n,n+1}=\sqrt{n\cdot\left\lceil\frac{n+1}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n+1}{2}\right\rceil +1\right)}$$
 \qed
 \end{proof}
-\\
 \indent Stoga, va\v zi slede\' ce:
 $$S_{n+1}(T_n)\leqslant L_{n,n+1}= \sqrt{n\cdot\left\lceil\frac{n+1}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n+1}{2}\right\rceil +1\right)}$$
 
@@ -396,8 +372,6 @@ $$\Longrightarrow S_k\geqslant \frac{k}{2k-2}\cdot \sqrt{2.2782^2+9(n-2)}$$\qed
     ne manje od 1; stoga, posmatrani put bi se mogao smestiti
     u neku traku \v sirine 1 u prostoru $R^{k+1}$, kontradikcija.
 \end{proof}
-\\
-
 \section[Traka u $\mathbb{R}^2$ sa proizvoljnim brojem ljudi]{Traka u $\mathbb{R}^2$ sa proizvoljnim brojem ljudi}
 \bigskip
 \begin{lem} Za \v sumu $F$ u $\mathbb{R}^n$ va\v zi: $$S_1(F)=S_2(F).$$\end{lem}
