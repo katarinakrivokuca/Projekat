@@ -1,5 +1,22 @@
-\documentclass[11pt]{article}
-\usepackage{amsmath, amssymb, amsthm, esvect}
+\documentclass[11pt,letter]{article}
+\usepackage{amsfonts,epsf,amsmath,amssymb,graphicx,tabularx,booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{epstopdf}
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{subfig}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{url}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{babel}[serbian]
+\usepackage{esvect}
+
 
 \newtheorem{teo}{\bf Teorema}[section]
 \newtheorem{posl}[teo]{\bf Posledica}
@@ -9,12 +26,18 @@
 \newtheorem{pro}[teo]{\bf Problem}
 \newtheorem{df}[teo]{\bf Definicija}
 
+\newcommand{\comment}[1]{\ $[\![${\normalsize #1}$]\!]$ \ }
+\newcommand{\proof}{\noindent{\bf Proof.\ }}
+\newcommand{\qed}{\hfill $\square$ \bigskip}
+\def\cp{\,\square\,}
+
+
+
 \renewcommand{\tablename}{Tabela}
 \renewcommand{\figurename}{Slika}
 \renewcommand{\refname}{Literatura}
 \renewcommand{\abstractname}{Apstrakt}
-\renewcommand{\proofname}{Dokaz}
-\renewcommand{\vv}{\overrightarrow}
+\renewcommand{\proof}{\textbf{Dokaz.}}
 
 % Centering the EPS graphics inside the FIGURE environment
 \def\slika #1{\begin{center} \epsffile{#1} \end{center}}
@@ -37,13 +60,15 @@
 \title{\bf{Problem izlaska iz \v sume}}
 
 \author{
-Katarina Krivoku\'ca \\
+Katarina Krivoku\'ca (2000), Jovana Suboti\' ca 11, Zemun \\
 Matemati\v cka gimnazija, Beograd, Srbija\\
 e-mail: \tt{katarinakrivokuca@outlook.com} \\
 \and
-Dimitrije Gluk\v cevi\' c \\
+Dimitrije Gluk\v cevi\' c (2001), Arhiepiskopa Danila Drugog 35, Ni\v s\\
 Gimnazija ,,Svetozar Markovi\' c", Ni\v s, Srbija \\
 e-mail: \tt{dimchee90@gmail.com} \\
+\and
+mentor: dr Bojan Ba\v si\' c, vanredni profesor Prirodno-matemati\v ckog fakulteta u Novom Sadu
 }
 
 \date{\today}
@@ -241,7 +266,7 @@ $$n\cdot l_{n+1}^2-l_{n+1}\cdot 2\sum^{n}_{i=2}l_i+\sum^{n}_{i=2}l_i^2-2\sum^{n}
 $$l_2, l_3,..., l_{n+1}\in \{0, l\}.$$
 
 \indent Posmatrana suma mo\v ze da se prezapi\v se kao:
-$$\sum^{n+1}_{i=2}{l_i}^2 + \sum^{n+1}_{\substack{i=2\\ i<j}} {(l_i-l_j)}^2 = n+1$$
+$$\sum^{n+1}_{i=2}{l_i}^2+\sum^{n+1}_{\substack{i=2\\ i<j}}(l_i-l_j)^2=n+1$$
 \indent Neka od ovih du\v zina $a\in \mathbb{N}$ ima vrednost $l$, a $n-a$ ima vrednost 0. Ubacivanjem toga u prethodno, dobija se:
 $$a\cdot l^2+(n-a)a\cdot l^2=n+1$$
 $$\Rightarrow l^2\cdot a(n+1-a)=n+1$$
@@ -260,14 +285,11 @@ $$\frac{\sqrt2}{l}=\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left
 \indent Dodatno, ovaj simpleks je po konstrukciji minimalan, tj. svaki pravilan $n$-simpleks kra\' ce stranice se mo\v ze postaviti izme\dj u dva paralelna $(n-1)$-dimenziona potprostora na udaljenosti 1.\qed
 \\
 \end{proof}
+\\
 \subsection[Jedan \v covek]{Jedan \v covek}
 \bigskip
-\begin{teo}
-	Put koji formiraju po trojkama nekomplanarne ivice $n$-simpleksa \v cije su ivice du\v zine
-	$\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}$
-	je izlazni put iz trake u n dimenzija i taj put ima du\v zinu:
-	$$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}.$$
-\end{teo}
+\begin{teo} Put koji formiraju po trojkama nekomplanarne ivice $n$-simpleksa \v cije su ivice du\v zine $\sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}$ je izlazni put iz trake u n dimenzija i taj put ima du\v zinu:
+$$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}.$$\end{teo}
 \smallskip
 
 \begin{proof}
@@ -278,6 +300,8 @@ Prema tvr\dj enju Teoreme 2.1, ovaj simpleks se ne mo\v ze postaviti izme\dj u p
 \\
 $$L_{n,1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}. $$ \qed
 \end{proof}
+\\
+\\
 \indent Stoga, va\v zi slede\' ce:
 $$S_1(T_n)\leqslant L_{n, 1}=n\cdot \sqrt{\frac{2\left\lceil \frac{n+1}{2}\right\rceil\cdot \left( n-\left\lceil\frac{n+1}{2}\right\rceil+1\right)}{n+1}}.$$
 \\
@@ -302,6 +326,7 @@ $$L_{n,n+1}=\frac{1}{n+1}\cdot\sqrt{n\cdot\left\lceil\frac{n+1}{2}\right\rceil\c
 $$L_{n,n+1}=\sqrt{n\cdot\left\lceil\frac{n+1}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n+1}{2}\right\rceil +1\right)}$$
 \qed
 \end{proof}
+\\
 \indent Stoga, va\v zi slede\' ce:
 $$S_{n+1}(T_n)\leqslant L_{n,n+1}= \sqrt{n\cdot\left\lceil\frac{n+1}{2}\right\rceil\cdot\left( n-\left\lceil\frac{n+1}{2}\right\rceil +1\right)}$$
 
@@ -354,30 +379,19 @@ $$\Longrightarrow S_k\geqslant \frac{k}{2k-2}\cdot \sqrt{2.2782^2+9(n-2)}$$\qed
 \begin{teo} Najkra\' ca izlazna putanja iz $k$-trake u $\mathbb{R}^n$ je ista kao najkra\' ca izlazna putanja iz trake u $\mathbb{R}^{k+1}$.\end{teo}
 
 \begin{proof}
-    Posmatrajmo jedan izlazni put iz trake u $(k+1)$-noj
-    dimenziji, i pretpostavimo da je on ceo u unutra\v snjosti na\v se
-    $k$-trake u $n$-dimenzija.
-    Projektujemo dati $R^n$ prostor na $R^{k+1}$ potprostor u kom
-    le\v zi posmatrani put.
-    Prilikom ortogonalne projekcije bilo koje figure,
-    njena \v sirina (u prostoru na koji smo projektovali)
-    ne mo\v ze biti ve\' ca nego \v sirina polazne figure u
-    polaznom prostoru (zaista, ukoliko bi se projektovana
-    figura mogla smestiti izme\dj u neke dve hiperravni u svom
-    potprostoru, od njih direktno mo\v zemo, pomeranjem u pravcu
-    projekcije, napraviti hiperravni polaznog prostora
-    izme\dj u kojih je polazna figura).
-    Dakle, posmatranom projekcijom se uo\v ceni put projektuje na sebe,
-    a \v citava $k$-traka se projektuje na neki objekat \v sirine
-    ne manje od 1; stoga, posmatrani put bi se mogao smestiti
-    u neku traku \v sirine 1 u prostoru $R^{k+1}$, kontradikcija.
+Poka\v zimo da za svaki izlazni put u traci u $(k+1)$ dimenzija va\v zi da je on tako\dj e i izlazni put iz $k$-trake u $n$ dimenzija. Posmatrajmo jedan izlazni put iz trake u $(k+1)$-noj dimenziji i pretpostavimo da je on ceo u unutra\v snjosti na\v se $k$-trake u $n$ dimenzija. Projektujmo dati $\mathbb{R}^n$ prostor na $\mathbb{R}^{k+1}$ potprostor u kom le\v zi posmatrani put. Prilikom ortogonalne projekcije bilo koje figure, njena \v sirina (u prostoru na koji smo projektovali) ne mo\v ze biti ve\' ca nego \v sirina polazne figure u polaznom prostoru (zaista, ukoliko bi se projektovana figura mogla smestiti izme\dj u neke dve hiperravni u svom potprostoru, od njih direktno mo\v zemo, pomeranjem u pravcu projekcije, napraviti hiperravni polaznog prostora izme\dj u kojih je polazna figura). Dakle, posmatranom projekcijom se uo\v ceni put projektuje na sebe, a \v citava $k$-traka se projektuje na neki objekat \v sirine ne manje od 1; stoga, posmatrani put bi se mogao smestiti u neku traku \v sirine 1 u prostoru $\mathbb{R}^{k+1}$, kontradikcija.
+\\
+Doka\v zimo jo\v s i da ne postoji kra\' ci izlazni put iz $k$-trake u $n$ dimenzija. Neka je $P$ $k$-dimenzioni potprostor koji defini\v se posmatranu $k$-traku u $n$ dimenzija i neka je $v$ proizvoljan jedini\v cni vektor ortogonalan na $P$. Defini\v simo skup:
+$$X_v=\left\{ \lambda v+p| p\in P, |\lambda v|\leqslant \frac{1}{2} \right\}.$$
+Ovaj skup predstavlja traku u $(k+1)$-noj dimenziji i ona je upravo projekcija polazne $k$-trake na odgovaraju\' ci $(k+1)$-dimenzioni potprostor. Dakle, ukoliko bi postojao kra\' ci izlazni put iz polazne $k$-trake, on bi se na ovaj na\v cin projektovao na put iste ili jo\v s manje du\v zine koji bi bio izlazni put za traku u $(k+1)$-oj dimenziji, kontradikcija.\qed
 \end{proof}
+\\
+
 \section[Traka u $\mathbb{R}^2$ sa proizvoljnim brojem ljudi]{Traka u $\mathbb{R}^2$ sa proizvoljnim brojem ljudi}
 \bigskip
 \begin{lem} Za \v sumu $F$ u $\mathbb{R}^n$ va\v zi: $$S_1(F)=S_2(F).$$\end{lem}
 
-\begin{proof}
-Za svaki izlazni put za jednog \v coveka postoji ekvivalentan izlazni put za dvojicu jer ako dva \v coveka krenu iz bilo koje ta\v cke tog puta i u suprotnim smerovima ga prate, obrazova\' ce isti put. Sli\v cno, za svaki izlazni put za dva \v coveka postoji ekvivalentan put za jednog \v coveka tako \v sto jedan \v covek ide putem koji bi formirao da krene iz krajnje pozicije na putu jednog od dva \v coveka i prati taj put do krajnje pozicije drugog.\qed
+\begin{proof}Za svaki izlazni put za jednog \v coveka postoji ekvivalentan izlazni put za dvojicu jer ako dva \v coveka krenu iz bilo koje ta\v cke tog puta i u suprotnim smerovima ga prate, obrazova\' ce isti put. Sli\v cno, za svaki izlazni put za dva \v coveka postoji ekvivalentan put za jednog \v coveka tako \v sto jedan \v covek ide putem koji bi formirao da krene iz krajnje pozicije na putu jednog od dva \v coveka i prati taj put do krajnje pozicije drugog.\qed
 \end{proof}
 \begin{df} Geometrijska medijana skupa ta\v caka $S=\{ X_1, X_2, ..., X_m\}$, gde su $X_i\in \mathbb{R}^n$ je ta\v cka $M\in \mathbb{R}^n$ za koju va\v zi:
 $$\underset{M\in \mathbb{R}^n}{\arg\min} \sum^m_{i=1}{d(X_i, M)}, $$
@@ -437,7 +451,7 @@ tj. $c=2$. Ovo je slu\v caj gde je $\bigtriangleup ABC$ jednakostrani\v can i $X
 \\
 \\
 \indent Ponovo je uslov da ovaj put bude izlazan iz $T_2$ da su sve visine ovog trougla du\v zine barem 1, tj. da je $h_a\geqslant 1$ i va\v zi:
-$$h_a=\sin{(\angle BCA)}\cdot AC\geqslant 1$$
+$$h_a=\sin{(\angle BCA)}\cdot CA\geqslant 1$$
 \\
 \indent Po\v sto je $\angle BAC>120^\circ$, tada je $\angle BCA<30^\circ$, tj. $\sin(\angle BCA)<\frac{1}{2}$, mora va\v ziti $CA>2$, te mora va\v ziti i $CA+AB>2$, te ovaj slu\v caj ne mo\v ze biti bolji od prethodnog, \v cime je dokaz kompletan.\qed
 \\
