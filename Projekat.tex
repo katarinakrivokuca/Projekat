@@ -128,7 +128,7 @@ Formalno, to bi se definisalo kao:
 \begin{df} Za put za $k$ ljudi ka\v zemo da je izlazni put iz \v sume $F$ ako za bilo koji po\v cetni polo\v zaj, barem jedan od $k$ puteva iz skupa izlazi iz $F$.\end{df}
 \smallskip
 
-\indent Na primer, iz \v sume u $\mathbb{R}^2$ ograni\v cene sa dve prave na jedini\v cnoj udaljenosti, za jednu osobu je najkra\' ci izlazni put Zalgalerova putanja, koja je du\v zine oko 2.278291644, a za tri \v coveka jedan od izlaznih puteva \v cine tri du\v zi du\v zine $\frac{2}{3}$ pod uglovima od $120^\circ$. Ovaj izlazni put za 3 osobe ima du\v zinu 2, te je kra\' ci od Zalgalerove krive.
+\indent Na primer, iz \v sume u $\mathbb{R}^2$ ograni\v cene sa dve prave na jedini\v cnoj udaljenosti, za jednu osobu je najkra\' ci izlazni put Zalgalerova putanja, koja je du\v zine oko 2,278291644, a za tri \v coveka jedan od izlaznih puteva \v cine tri du\v zi du\v zine $\frac{2}{3}$ pod uglovima od $120^\circ$. Ovaj izlazni put za 3 osobe ima du\v zinu 2, te je kra\' ci od Zalgalerove krive.
 \\
 \smallskip
 \\
@@ -387,16 +387,23 @@ Ovaj skup predstavlja traku u $(k+1)$-voj dimenziji i ona je upravo projekcija p
 \\
 
 \section[Traka u $\mathbb{R}^2$ sa proizvoljnim brojem ljudi]{Traka u $\mathbb{R}^2$ sa proizvoljnim brojem ljudi}
+
+U ovom odeljku se bavimo restrikcijom problema na ravan.
+\\
+\indent Prvo \' cemo pokazati pomo\' cno tvr\dj enje koje va\v zi nezavisno od dimenzije prostora i tvrdi da je problem pronala\v zenja najkra\' ceg puta za jednu i za dve osobe ekvivalentan. 
+\\
+\indent Zatim pokazujemo da je pri restrikciji konveksnog omota\v ca puta na trougao, najkra\' ci izlazni put iz trake u ravni du\v zine 2, nezavisno od broja ljudi. Pri tome, put za dva \v coveka dobijen konstrukcijom iz Teoreme 2.5 je ba\v s du\v zine 2, \v sto ide u prilog hipotezi da ne postoji put kra\' ci od tog.
+ 
 \bigskip
 \begin{lem} Za \v sumu $F$ u $\mathbb{R}^n$ va\v zi: $$S_1(F)=S_2(F).$$\end{lem}
 
 \begin{proof}Za svaki izlazni put za jednog \v coveka postoji ekvivalentan izlazni put za dvojicu jer ako dva \v coveka krenu iz bilo koje ta\v cke tog puta i u suprotnim smerovima ga prate, obrazova\' ce isti put. Sli\v cno, za svaki izlazni put za dva \v coveka postoji ekvivalentan put za jednog \v coveka tako \v sto jedan \v covek ide putem koji bi formirao da krene iz krajnje pozicije na putu jednog od dva \v coveka i prati taj put do krajnje pozicije drugog.\qed
 \end{proof}
 \begin{df} Geometrijska medijana skupa ta\v caka $S=\{ X_1, X_2, ..., X_m\}$, gde su $X_i\in \mathbb{R}^n$ je ta\v cka $M\in \mathbb{R}^n$ za koju va\v zi:
-$$\underset{M\in \mathbb{R}^n}{\arg\min} \sum^m_{i=1}{d(X_i, M)}, $$
-gde je za $A,B\in \mathbb{R}^n$ $d(A, B)$ euklidska razdaljina izme\dj u ta\v caka $A$ i $B.$\end{df}
+$$M\in \underset{M\in \mathbb{R}^n}{\arg\min} \sum^m_{i=1}{d(X_i, M)}, $$
+gde je za $A,B\in \mathbb{R}^n$ $d(A, B)$ euklidska razdaljina izme\dj u ta\v caka $A$ i $B$, a za svaku funkciju $f: \mathbb{R}^n\to \mathbb{R}$ je $\underset{M\in \mathbb{R}^n}{\arg\min} f(M)$ skup globalnih minimuma funkcije $f$. \end{df}
 \begin{df} Tori\v celijeva ta\v cka je geometrijska medijana trougla. \end{df}
-\indent Za Tori\v celijevu ta\v cku su poznata svojstva:
+\indent Za Tori\v celijevu ta\v cku su poznata ova svojstva:
 \begin{enumerate}
 \item Ako je u $\bigtriangleup ABC$ jedan od uglova ve\' ci od $120^\circ$, Tori\v celijeva ta\v cka $\bigtriangleup ABC$ je teme tog ugla.
 \item Ako su u $\bigtriangleup ABC$ svi uglovi ne ve\' ci od $120^\circ$,Tori\v celijeva ta\v cka $\bigtriangleup ABC$ je ta\v cka $X$ takva da va\v zi:
@@ -404,23 +411,23 @@ $$\angle AXB=\angle BXC= \angle CXA=120^\circ$$
 \end{enumerate}
 
 
-\begin{teo} Najkra\' ci izlazni put iz $T_2$ \v ciji je konveksni omota\v c trougao je du\v zine $2$. Ta\v cnije, to je put za troje ljudi koji kre\' cu iz centra jednakostrani\v cnog trougla i svaki \v covek ide ka jednom od temena.
+\begin{teo} Najkra\' ci izlazni put iz $T_2$ \v ciji je konveksni omota\v c trougao koji ima du\v zinu $2$. Ta\v cnije, to je put za troje ljudi koji kre\' cu iz centra jednakostrani\v cnog trougla i svaki \v covek ide ka jednom od temena.
 \end{teo}
 
 \begin{proof}
-Neka je konveksni omota\v c posmatranog puta $\bigtriangleup ABC$ i neka je po\v cetna ta\v cka puta ta\v cka $X$ (unutar $\bigtriangleup ABC$). Da bi ovo bio konveksni omota\v c posmatranog puta, neki od ljudi koji kre\' cu iz $X$ svakako moraju da u nekom trenutku pro\dj u i kroz ta\v cku $A$, $B$ i $C$. Kada bi iz ta\v cke $X$ kretalo vi\v se od 3 osobe, svakako neka tri \v coveka (ili manje) od njih moraju da pro\dj u kroz ova tri temena trougla, a ostali nikako ne doprinose obliku konveksnog omota\v ca, te su bespotrebni, tj. kada svi ljudi osim te trojice koji prolaze kroz temena ne bi krenuli, put bi bio kra\' ci. Stoga, optimalno je da krene najvi\v se tri osobe. 
+Neka je $\bigtriangleup ABC$ konveksni omota\v c posmatranog puta  i neka je po\v cetna ta\v cka puta ta\v cka $X$ (unutar $\bigtriangleup ABC$). Da bi ovo bio konveksni omota\v c posmatranog puta, neki od ljudi koji kre\' cu iz $X$ svakako moraju da u nekom trenutku pro\dj u i kroz ta\v cku $A$, $B$ i $C$. Kada bi iz ta\v cke $X$ kretalo vi\v se od 3 osobe, svakako neka tri \v coveka (ili manje) od njih moraju da pro\dj u kroz ova tri temena trougla, a ostali nikako ne doprinose obliku konveksnog omota\v ca. Stoga, optimalno je da krene najvi\v se tri osobe. 
 \\
 \\
 \indent Ako za $\bigtriangleup ABC$ va\v zi da su mu svi uglovi ne ve\' ci od $120^\circ$, Tori\v celijeva ta\v cka je unutar trougla i ,,gleda" sve stranice trougla pod uglom od $120^\circ$. Put koji obrazuje troje ljudi koji kre\' cu iz Tori\v celijeve ta\v cke i svaki ide do jednog temena je kra\' ci od bilo kog puta za jednog \v coveka, jer bi taj put morao da pro\dj e kroz sva temena, tj. najkra\' ci put za jednog \v coveka bi bio sa\v cinjen od dve najkra\' ce stranice, \v sto je du\v ze od puta iz Tori\v celijeve ta\v cke (po definiciji geometrijske medijane).
 \\
 \\
-\indent Stoga, neka je $X$ Tori\v celijeva ta\v cka $\bigtriangleup ABC$. Neka su $h_a, h_b, h_c$ redom visine iz temena $A, B, C$ i neka je $x=|AX|, y=|BX|, z=|CX|$. Da bi put sa ovim konveksnim omota\v cem bio izlazan iz $T_2$, mora va\v ziti $\min{\{h_a,h_b,h_c\}}\geqslant 1$, s tim da se tra\v zi minimalna suma $x+y+z$ pri kojoj to va\v zi.
+\indent Stoga, neka je $X$ Tori\v celijeva ta\v cka $\bigtriangleup ABC$. Neka su $h_a, h_b, h_c$ redom visine iz temena $A, B, C$ i neka je $x=|AX|, y=|BX|, z=|CX|$. Da bi put sa ovim konveksnim omota\v cem bio izlazni iz $T_2$, mora va\v ziti $\min{\{h_a,h_b,h_c\}}\geqslant 1$, s tim da se tra\v zi minimalna suma $x+y+z$ pri kojoj to va\v zi.
 \\
 \\
 \indent Problem minimizacije $x+y+z$ pri uslovu $\min{\{h_a,h_b,h_c\}}\geqslant 1$ je ekvivalentan problemu maksimizacije $\min{\{h_a,h_b,h_c\}}$ ako fiksiramo $x+y+z=c$, za bilo koju pozitivnu konstantu $c$.
 \\
 \\
-\indent Bez umanjenja op\v steg, neka je $h_a\leqslant h_b\leqslant h_c$, tj. $x\leqslant y\leqslant z$. Va\v zi slede\' ce:
+\indent Bez umanjenja op\v stosti, neka je $h_a\leqslant h_b\leqslant h_c$, tj. $x\leqslant y\leqslant z$. Va\v zi slede\' ce:
 \begin{center}
 $$P(\bigtriangleup ABC)=\frac{h_a\cdot BC}{2}=P(\bigtriangleup ABX)+P(\bigtriangleup BCX)+P(\bigtriangleup CAX)=$$
 $$=\frac{xy\cdot \sin{(\angle AXB)}}{2}+\frac{yz\cdot \sin{(\angle BXC)}}{2}+\frac{zx\cdot \sin(\angle CXA)}{2}=\frac{\sqrt3}{4}\cdot(xy+yz+zx)$$
@@ -433,23 +440,23 @@ $$\Longrightarrow h_a=\frac{\sqrt3}{2}\cdot \frac{xy+yz+zx}{BC}.$$
 \\
 $$BC=\sqrt{y^2+z^2-2\cos{(\angle BXC)}\cdot yz}=\sqrt{y^2+z^2+yz}.$$
 \\
-\indent Ubacivanjem izraza za $BC$ u izraz za $h_a$ dobijamo izraz koji treba maksimizovati  pri uslovu $x\leqslant y\leqslant z$:
+\indent Uvr\v stavanjem izraza za $BC$ u izraz za $h_a$ dobijamo izraz koji treba maksimizovati  pri uslovu $x\leqslant y\leqslant z$:
 $$h_a=\frac{\sqrt3}{2}\cdot \frac{xy+yz+zx}{\sqrt{y^2+z^2+yz}}\leqslant \frac{\sqrt3}{2}\cdot \frac{xy+yz+zx}{\sqrt{xy+yz+zx}}=\frac{\sqrt3}{2}\cdot \sqrt{xy+yz+zx}.$$
 \\
 \indent Po\v sto je $x+y+z=c$ i ovi brojevi predstavljaju du\v zine, tj. nenegativni su, prema nejednakosti izme\dj u aritmeti\v cke i geometrijske sredine va\v zi:
-$$xy+yz+zx\leqslant x^2+y^2+z^2$$
-$$\Longrightarrow xy+yz+zx\leqslant \frac{1}{3}\cdot (x+y+z)^2=\frac{1}{3}\cdot c^2$$
-$$\Longrightarrow \sqrt{xy+yz+zx}\leqslant \frac{1}{\sqrt3}\cdot c.$$
+$$xy+yz+zx\leqslant x^2+y^2+z^2,$$
+$$\text{odakle je } xy+yz+zx\leqslant \frac{1}{3}\cdot (x+y+z)^2=\frac{1}{3}\cdot c^2$$
+$$\text{i zato } \sqrt{xy+yz+zx}\leqslant \frac{1}{\sqrt3}\cdot c.$$
 \\
 \indent Maksimum se dosti\v ze za $x=y=z$ i tada je:
 $$1=\frac{\sqrt3}{2}\sqrt{xy+yz+zx}=\frac{1}{2}\cdot c,$$
 tj. $c=2$. Ovo je slu\v caj gde je $\bigtriangleup ABC$ jednakostrani\v can i $X$ je njegov centar.
 \\
 \\
-\indent Ako je neki od uglova $\bigtriangleup ABC$ ve\' ci od $120^\circ$, Tori\v celijeva ta\v cka je ono teme u kom se spajaju dve najkra\' ce stranice. Zbog pretpostavle $h_a\leqslant h_b\leqslant h_c$ va\v zi $\angle BAC>120^\circ$.
+\indent Ako je neki od uglova $\bigtriangleup ABC$ ve\' ci od $120^\circ$, Tori\v celijeva ta\v cka je ono teme u kom se spajaju dve najkra\' ce stranice. Zbog pretpostavke $h_a\leqslant h_b\leqslant h_c$ va\v zi $\angle BAC>120^\circ$.
 \\
 \\
-\indent Ponovo je uslov da ovaj put bude izlazan iz $T_2$ da su sve visine ovog trougla du\v zine barem 1, tj. da je $h_a\geqslant 1$ i va\v zi:
+\indent Ponovo je uslov da ovaj put bude izlazni iz $T_2$ da su sve visine ovog trougla du\v zine barem 1, tj. da je $h_a\geqslant 1$ i va\v zi:
 $$h_a=\sin{(\angle BCA)}\cdot CA\geqslant 1$$
 \\
 \indent Po\v sto je $\angle BAC>120^\circ$, tada je $\angle BCA<30^\circ$, tj. $\sin(\angle BCA)<\frac{1}{2}$, mora va\v ziti $CA>2$, te mora va\v ziti i $CA+AB>2$, te ovaj slu\v caj ne mo\v ze biti bolji od prethodnog, \v cime je dokaz kompletan.\qed
