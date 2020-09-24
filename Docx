@@ -1,0 +1,3 @@
+cat Projekat.tex | grep -v "\end{proof}" | grep -v "\usepackage{babel}\[serbian\]" > tmp.tex
+pandoc --pdf-engine=tectonic tmp.tex -o Projekat.docx
+rm -f tmp.tex
